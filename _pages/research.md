@@ -1,5 +1,5 @@
 ---
-permalink: /research
+permalink: /research/
 title: "Research"
 excerpt: "Research Overview"
 author_profile: true
@@ -7,22 +7,15 @@ redirect_from:
   - /
   - /index.html
 ---
-{% include base_path %}
-{% assign author = site.author %}
 
 ## Research Overview
 I'm a senior scientist coordinating the __Learning, Recognition & Surveillance__ workgroup at the __Institut of Computer Graphics & Vision__.
-My PhD research focused on....
-Currently, my research interests are...
+My PhD research focused on visual object tracking, leveraging __a priori__/context information for generic single object tracking, as well as multi-object tracking algorithms.
+Currently, my research interests include (multiple) object tracking and detection in both 2D and 3D, human behavior analysis, and video analysis in general.
 
-# Publications
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{ author.googlescholar }}">my Google Scholar profile</a>.</u>
-{% endif %}
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+## Selected Projects
+To be completed...
 
 
 ## Awards & Honors
@@ -49,15 +42,15 @@ Reviewing for journals (since 2014), including:
 * [IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34)
 * [IEEE Transactions on Image Processing (TIP)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=83)
 * [IEEE Transactions on Neural Networks and Learning Systems (TNNLS)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=5962385)
-* IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)
-* IEEE Signal Processing Letters (SP LETTERS)
-* IEEE Transactions on Multimedia (TMM)
-* Elsevier Computer Vision and Image Understanding (CVIU)
-* Elsevier Pattern Recognition (PR)
-* Elsevier Pattern Recognition Letters (PR LETTERS)
-* Elseview Image and Vision Computing (IMAVIS)
-* Elsevier Journal of Visual Communication and Image Representation (JVCI)
-* International Journal of Distributed Sensor Networks (IJDSN)
-* Systems Science and Control Engineering (SSCE)
-* Computational Intelligence and Neuroscience (CIN)
-* IET Computer Vision
+* [IEEE Transactions on Circuits and Systems for Video Technology (TCSVT)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=76)
+* [IEEE Signal Processing Letters (SP LETTERS)](https://signalprocessingsociety.org/publications-resources/ieee-signal-processing-letters)
+* [IEEE Transactions on Multimedia (TMM)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046)
+* [Elsevier Pattern Recognition (PR)](https://www.journals.elsevier.com/pattern-recognition)
+* [Elsevier Computer Vision and Image Understanding (CVIU)](https://www.journals.elsevier.com/computer-vision-and-image-understanding)
+* [Elsevier Pattern Recognition Letters (PR LETTERS)](https://www.journals.elsevier.com/pattern-recognition-letters)
+* [Elsevier Image and Vision Computing (IMAVIS)](https://www.journals.elsevier.com/image-and-vision-computing)
+* [Elsevier Journal of Visual Communication and Image Representation (JVCI)](https://www.journals.elsevier.com/journal-of-visual-communication-and-image-representation)
+* [Systems Science & Control Engineering (TSSC)](https://www.tandfonline.com/action/journalInformation?journalCode=tssc20)
+* [International Journal of Distributed Sensor Networks (IJDSN)](https://journals.sagepub.com/home/dsn)
+* [Computational Intelligence and Neuroscience (CIN)](https://www.hindawi.com/journals/cin)
+* [IET Computer Vision](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4159597)
