@@ -21,8 +21,11 @@ To be completed...
 ## Awards & Honors
 * Winner of the **Austrian Road Safety Board Research Award** (Forschungspreis des Kuratoriums f&uuml;r Verkehrssicherheit, KfV), 2020
 * **Outstanding Reviewer**, European Conference on Computer Vision (ECCV), 2020
+* NVIDIA Higher Education and Research Grant recipient, 2017
 * **Outstanding Reviewer**, Elsevier Pattern Recognition (PR), 2017
 * **OCG Best Paper Award** by the Austrian Computer Society (&Ouml;sterreichische Computer Gesellschaft), 2013
+* Scholarship for hardware acquisition based on study performance granted by the Faculty of Computer Science, Graz University of Technology, 2012
+* **Academic excellence scholarships** from the Faculty of Computer Science, Graz University of Technology, 2008, 2009, 2010 and 2011
 
 
 ## Professional Services
