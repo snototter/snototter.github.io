@@ -39,14 +39,14 @@ social:
 
 # Analytics
 analytics:
-  provider               :  false #"google-universal" # false (default), "google", "google-universal", "custom"
+  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "G-0WJHXQR1WH"
 
 
 # Site Author
 author:
-  name             : "Horst Possegger"
+  name             : 
   avatar           : "brick.jpg"
   bio              : "Computer Vision Researcher by profession, Maker by passion"
   location         : 
@@ -55,33 +55,21 @@ author:
   googlescholar    : "https://scholar.google.com/citations?user=iWPrl3wAAAAJ&hl=en"
   email            :
   researchgate     : "https://www.researchgate.net/profile/Horst_Possegger"
+  dblp             : "https://dblp.uni-trier.de/pid/135/4917.html"
+
   uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
   github           : "snototter"
-  google_plus      :
-  keybase          :
-  instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         :
+  linkedin         : "horst-possegger-818b80b9"
   orcid            : "https://orcid.org/0000-0002-5427-9938"
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : # http://stackoverflow.com/users/123456/username
+  stackoverflow    :
   steam            :
-  tumblr           :
   twitter          : 
-  vine             :
-  weibo            :
   xing             :
   youtube          :
+  reddit           : "sarcastic-snot-otter"
   wikipedia        :
-  vimeo            : "snototter"
+  vimeo            : "https://vimeo.com/snototter"
 
 
 # Reading Files
