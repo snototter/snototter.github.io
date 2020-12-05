@@ -18,12 +18,11 @@
     {% if author.github %}
         <a href="https://github.com/{{ author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i></a>
     {% endif %}
-    {% if author.linkedin %}
-        <a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>
-    {% endif %}
+    <i class="fab fa-fw empty-icon"></i>
     {% if author.googlescholar %}
         <a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i></a>
     {% endif %}
+
     {% if author.researchgate %}
         <a href="{{ author.researchgate }}"><i class="ai ai-lg ai-researchgate" aria-hidden="true"></i></a>
     {% endif %}
@@ -33,6 +32,10 @@
     {% if author.dblp %}
         <a href="{{ author.dblp }}"><i class="ai ai-dblp ai-lg"></i></a>
     {% endif %}
+    {% if author.linkedin %}
+        <a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>
+    {% endif %}
+
     {% if author.vimeo %}
         <a href="{{ author.vimeo }}"><i class="fab fa-fw fa-vimeo" aria-hidden="true"></i></a>
     {% endif %}
@@ -45,6 +48,7 @@
     {% if author.youtube %}
         <a href="{{ author.youtube }}"><i class="fab fa-fw fa-youtube" aria-hidden="true"></i></a>
     {% endif %}
+    
 
     <!-- 
 **linkedin:   fab fa-fw ai-lg fa-linkedin

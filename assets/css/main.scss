@@ -39,3 +39,17 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* Custom extension of author profile: */
+.empty-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.3em;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  color: black;
+  font-size: 1.3em;
+}

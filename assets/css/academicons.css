@@ -25,6 +25,9 @@
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
+  color: black;
+  width: 1.5em;
+  font-size: 1.3em;
 }
 .ai-academia:before {
   content: "\e9af";
