@@ -18,7 +18,8 @@
 	display:inline-block;
 	font:normal normal normal 14px/1 Academicons;
 	font-size:inherit;
-	text-rendering:auto;
+    text-rendering:auto;
+    color: black;
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
 }
@@ -210,9 +211,9 @@
 }
 /*  Duplication of the FontAwesome style classes using 'ai' in place of 'fa'. */
 .ai-lg {
-  font-size: 1.33333333em;
+  font-size: 1.3em;
   line-height: 0.75em;
-  vertical-align: -15%;
+  /*vertical-align: -15%;*/
 }
 .ai-2x {
   font-size: 2em;
@@ -272,7 +273,7 @@
 .fa-lg {
   font-size: 1.33333333em;
   line-height: 0.75em;
-  vertical-align: -15%;
+  /*vertical-align: -15%;*/
 }
 .fa-2x {
   font-size: 2em;
@@ -287,8 +288,11 @@
   font-size: 5em;
 }
 .fa-fw {
-  width: 1.28571429em;
+  width: 1.4em;
+  font-size: 1.3em;
+  padding: 2px;
   text-align: center;
+  color: black;
 }
 .fa-ul {
   padding-left: 0;

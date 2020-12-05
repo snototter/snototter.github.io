@@ -5,6 +5,7 @@ author_profile: true
 redirect_from: 
   - /data
   - /downloads
+  - /tinkering
 ---
 
 # Software

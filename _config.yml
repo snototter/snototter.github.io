@@ -62,12 +62,13 @@ author:
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   linkedin         : "horst-possegger-818b80b9"
   orcid            : "https://orcid.org/0000-0002-5427-9938"
+  semanticscholar  : "https://www.semanticscholar.org/author/Horst-Possegger/1720811"
   stackoverflow    :
   steam            :
   twitter          : 
   xing             :
-  youtube          :
-  reddit           : "sarcastic-snot-otter"
+  youtube          : "ldw"
+  reddit           : "https://www.reddit.com/user/sarcastic-snot-otter"
   wikipedia        :
   vimeo            : "https://vimeo.com/snototter"
 
@@ -132,11 +133,11 @@ kramdown:
 # Collections
 collections:
   publications:
-    output: true
+    output: false
     permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
+  #portfolio:
+  #  output: true
+  #  permalink: /:collection/:path/
   
 
 # Defaults
@@ -158,14 +159,14 @@ defaults:
       share: false
       comments: false
   # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: false
-      comment: false
+  #- scope:
+  #    path: ""
+  #    type: portfolio
+  #  values:
+  #    layout: single
+  #    author_profile: true
+  #    share: false
+  #    comment: false
 
 # Sass/SCSS
 sass:
