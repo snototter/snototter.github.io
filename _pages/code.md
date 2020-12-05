@@ -8,6 +8,8 @@ redirect_from:
   - /tinkering
 ---
 
+Still to be filled with actual content
+{% comment %}
 # Software
 ## iminspect
 ## vito
@@ -15,3 +17,4 @@ redirect_from:
 # Data
 ## ICG Lab6
 ## vPTZ
+{% endcomment %}

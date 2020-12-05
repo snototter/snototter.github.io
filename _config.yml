@@ -48,8 +48,9 @@ analytics:
 author:
   name             : 
   avatar           : "brick.jpg"
-  bio              : "Computer Vision Researcher by profession, Maker by passion"
+  bio              : "Computer Vision by profession, Tinkering by passion"
   location         : 
+  maplocation      : https://www.google.com/maps/place/Graz
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=iWPrl3wAAAAJ&hl=en"

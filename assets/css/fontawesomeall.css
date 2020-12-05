@@ -59,8 +59,9 @@
 
 .fa-fw {
   color: black;
-  width: 1.5em;
-  font-size: 1.3em; }
+  width: 1.2em;
+  line-height: 1.2;
+  font-size: 1.2em; }
 
 .fa-ul {
   list-style-type: none;
