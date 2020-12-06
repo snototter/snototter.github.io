@@ -1,5 +1,15 @@
 This is my personal website, forked from https://academicpages.github.io/
 
+# Additional BibTeX fields
+* `pdf_url` or `arxiv_url` for open access paper links
+* `doi_url` or `publisher_url` for official proceedings/journal version
+* `supplemental_url` for supplemental material
+* `slide_url` for slide decks
+* `video_url` for explanatory videos/visualizations
+* `data_url` for dataset downloads
+* `code_url` for code downloads
+* `project_url` for external project/detail page
+
 # Markdown Cheat Sheat for jekyll
 ## Locations of key files/directories
 

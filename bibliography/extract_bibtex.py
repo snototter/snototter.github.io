@@ -19,6 +19,8 @@ def parse_args():
 
 def html_escape(text):
     """Produce entities within text."""
+    # Check latex special characters: https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes
+    # HTML entitites: https://dev.w3.org/html5/html-author/charref
     escape_entities = [
         ('&', '&amp;'),
         # Tilde
@@ -62,16 +64,29 @@ def html_escape(text):
         ("\\'{O}", '&Oacute;'), ("{\\' O}", '&Oacute;'), ("{\\'O}", '&Oacute;'),
         ("\\'{u}", '&uacute;'), ("{\\' u}", '&uacute;'), ("{\\'u}", '&uacute;'),
         ("\\'{U}", '&Uacute;'), ("{\\' U}", '&Uacute;'), ("{\\'U}", '&Uacute;'),
-        # C("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
-        # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
-        # L("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
-        # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
+        ("\\'{c}", '&cacute;'), ("{\\' c}", '&cacute;'), ("{\\'c}", '&cacute;'),
+        ("\\'{C}", '&Cacute;'), ("{\\' C}", '&Cacute;'), ("{\\'C}", '&Cacute;'),
+        ("\\'{l}", '&lacute;'), ("{\\' l}", '&lacute;'), ("{\\'l}", '&lacute;'),
+        ("\\'{L}", '&Lacute;'), ("{\\' L}", '&Lacute;'), ("{\\'L}", '&Lacute;'),
         # N("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
         # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
         # R("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
         # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
         # S("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
         # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
+        # Cedilla
+        ('\\c{c}', '&ccedil;'), ('\\c{C}', '&Ccedil;'),
+        ('\\c{g}', '&gcedil;'), ('\\c{G}', '&Gcedil;'),
+        ('\\c{k}', '&kcedil;'), ('\\c{K}', '&Kcedil;'),
+        ('\\c{l}', '&lcedil;'), ('\\c{L}', '&Lcedil;'),
+        ('\\c{n}', '&ncedil;'), ('\\c{N}', '&Ncedil;'),
+        ('\\c{r}', '&rcedil;'), ('\\c{R}', '&Rcedil;'),
+        ('\\c{s}', '&scedil;'), ('\\c{S}', '&Scedil;'),
+        ('\\c{t}', '&tcedil;'), ('\\c{T}', '&Tcedil;'),
+        # Breve
+        ('\\u{a}', '&abreve;'), ('\\u{A}', '&Abreve;'),
+        ('\\u{g}', '&gbreve;'), ('\\u{G}', '&Gbreve;'),
+        ('\\u{u}', '&ubreve;'), ('\\u{U}', '&Ubreve;'),
         # Grave accents
         ('\\`{a}', '&agrave;'), ('{\\` a}', '&agrave;'), ('{\\`a}', '&agrave;'),
         ('\\`{A}', '&Agrave;'), ('{\\` A}', '&Agrave;'), ('{\\`A}', '&Agrave;'),
@@ -149,43 +164,56 @@ def dump_markdown(output_folder, entry):
             #         note = True
 
     md += f'year: {year}\n'
-    md += f'authors: {authors}\n'
+    md += f'authors: "{authors}"\n'
     if entry.type in ['phdthesis', 'mscthesis', 'bscthesis']:
         thesis_type = {
             'phdthesis': 'PhD thesis',
             'mscthesis': "Master's thesis",
             'bscthesis': "Bachelor's thesis"
         }
-        md += f'thesis_type: {thesis_type[entry.type]}\n'
+        md += f'thesis_type: "{thesis_type[entry.type]}"\n'
         venue = entry.fields['school']
     elif entry.type in ['inproceedings']:
         venue = 'In ' + entry.fields['booktitle']
     elif entry.type in ['article']:
         venue = entry.fields['journal']
+        #page_str = entry.fields['pages'] # todo if it really contains pages (pre-print!)
         #TODO + vol/issue, etc
 
     venue = html_escape(venue)
-    md += f'venue: {venue}\n'
+    md += f'venue: "{venue}"\n'
     
     # Add download/further links
     if 'venue_url' in entry.fields:
         md += f'venue_url: {entry.fields["venue_url"]}\n'
+    # Author/open access pdf
     if 'pdf_url' in entry.fields:
         md += f'pdf_url: {entry.fields["pdf_url"]}\n'
     if 'arxiv_url' in entry.fields:
         md += f'arxiv_url: {entry.fields["arxiv_url"]}\n'
+    # Official paper
     if 'doi_url' in entry.fields:
         md += f'doi_url: {entry.fields["doi_url"]}\n'
-    if 'project_url' in entry.fields:
-        md += f'project_url: {entry.fields["project_url"]}\n'
     if 'publisher_url' in entry.fields:
         md += f'publisher_url: {entry.fields["publisher_url"]}\n'
-    if 'video_url' in entry.fields:
-        md += f'video_url: {entry.fields["video_url"]}\n'
-    if 'code_url' in entry.fields:
-        md += f'code_url: {entry.fields["code_url"]}\n'
+    # Supplemental material
+    if 'supplemental_url' in entry.fields:
+        md += f'supplemental_url: {entry.fields["supplemental_url"]}\n'
+    # Slide deck
     if 'slide_url' in entry.fields:
         md += f'slide_url: {entry.fields["slide_url"]}\n'
+    # Video
+    if 'video_url' in entry.fields:
+        md += f'video_url: {entry.fields["video_url"]}\n'
+    # Data(set) download
+    if 'data_url' in entry.fields:
+        md += f'data_url: {entry.fields["data_url"]}\n'
+    # Code download
+    if 'code_url' in entry.fields:
+        md += f'code_url: {entry.fields["code_url"]}\n'
+    # External project page
+    if 'project_url' in entry.fields:
+        md += f'project_url: {entry.fields["project_url"]}\n'
     md += '---\n'
 
 

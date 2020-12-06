@@ -1,37 +1,50 @@
-<!--<td class="puburls">
-    <div class="puburldiv">
-      {% if pub.pdf_url %}
-        <a href="{{ pub.pdf_url }}" target="_blank"><i class="fa fa-file-pdf"></i></a>
-      {% else %}
-        <i class="fa fa-file-pdf"></i>
-      {% endif %}
-    </div>
-    <div class="puburldiv">
-      {% if pub.publisher_url %}
-        <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-book-open"></i></a>
-      {% else %}
-        <i class="fa fa-book-open"></i>
-      {% endif %}
-    </div>
-    <div class="puburldiv">
-      {% if pub.code_url %}
-        <a href="{{ pub.code_url }}" target="_blank"><i class="fa fa-file-code"></i></a>
-      {% else %}
-        <i class="fa fa-file-code"></i>
-      {% endif %}
-    </div>
-  </td>
-  
-    fa fa-globe-europe
-    fa-book-open
-    fa-link
-    fa-code
-    fa ODER fas ODER far file-code
-    laptop-code
-    code-branch
-    fa-desktop
-    fa-tv  
-    fa-file-pdf-->
+{% assign pdf_url = nil %}
+{% if pub.pdf_url %}
+  {% assign pdf_url = pub.pdf_url %}
+{% else %}
+  {% if pub.arxiv_url %}
+    {% assign pdf_url = pub.arxiv_url %}
+  {% endif %}  
+{% endif %}
+
+{% assign auth_url = nil %}
+{% if pub.publisher_url %}
+  {% assign auth_url = pub.publisher_url %}
+{% else %}
+  {% if pub.doi_url %}
+    {% assign auth_url = pub.doi_url %}
+  {% endif %}  
+{% endif %}
+
+{% assign supplemental_url = nil %}
+{% if pub.supplemental_url %}
+  {% assign supplemental_url = pub.supplemental_url %}
+{% endif %}
+
+{% assign slide_url = nil %}
+{% if pub.slide_url %}
+  {% assign slide_url = pub.slide_url %}
+{% endif %}
+
+{% assign video_url = nil %}
+{% if pub.video_url %}
+  {% assign video_url = pub.video_url %}
+{% endif %}
+
+{% assign data_url = nil %}
+{% if pub.data_url %}
+  {% assign data_url = pub.data_url %}
+{% endif %}
+
+{% assign code_url = nil %}
+{% if pub.code_url %}
+  {% assign code_url = pub.code_url %}
+{% endif %}
+
+{% assign external_url = nil %}
+{% if pub.project_url %}
+  {% assign external_url = pub.project_url %}
+{% endif %}
 
 <tr class="pubentry">
   <td class="pubyear">{{ pub.year }}</td>
@@ -48,68 +61,73 @@
       </p>
     {% endif %}
   </td>
-  
-    
   <td class="puburls">
     <table>
       <tr>
         <td>
-          {% if pub.pdf_url %}
-            <a href="{{ pub.pdf_url }}" target="_blank"><i class="fa fa-file-pdf withpuburl"></i></a>
+          {% if pdf_url %}
+            <a href="{{ pdf_url }}" target="_blank"><i class="fa fa-file-pdf withpuburl"></i></a>
           {% else %}
-            {% if pub.arxiv_url %}
-              <a href="{{ pub.arxiv_url }}" target="_blank"><i class="ai ai-arxiv withpuburl"></i></a>
-            {% else %}
-              <i class="fa fa-file-pdf withoutpuburl"></i>
-            {% endif %}
+            <i class="fa fa-file-pdf withoutpuburl"></i>
           {% endif %}
         </td>
         <td>
-          {% if pub.doi_url %}
-            <a href="{{ pub.doi_url }}" target="_blank"><i class="ai ai-doi withpuburl"></i></a>
+          {% if auth_url %}
+            <a href="{{ auth_url }}" target="_blank"><i class="fa fa-book-open withpuburl"></i></a>
           {% else %}
-            {% if pub.publisher_url %}
-              <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-book-open withpuburl"></i></a>
-            {% else %}
-              <i class="ai ai-doi withoutpuburl"></i>
-            {% endif %}
+            <i class="fa fa-book-open withoutpuburl"></i>
           {% endif %}
         </td>
         <td>
-          {% if pub.slide_url %}
-            <a href="{{ pub.slide_url }}" target="_blank"><i class="fa fa-desktop withpuburl"></i></a>
+            {% if supplemental_url %}
+              <a href="{{ supplemental_url }}" target="_blank"><i class="fa fa-file-alt withpuburl"></i></a>
+            {% else %}
+              <i class="fa fa-file-alt withoutpuburl"></i>
+            {% endif %}
+          </td>
+      </tr>
+      <tr>
+        <td>
+          {% if slide_url %}
+            <a href="{{ slide_url }}" target="_blank"><i class="fa fa-desktop withpuburl"></i></a>
           {% else %}
             <i class="fa fa-desktop withoutpuburl"></i>
           {% endif %}
         </td>
+        <td>
+          {% if video_url %}
+            <a href="{{ video_url }}" target="_blank"><i class="fa fa-video withpuburl"></i></a>
+          {% else %}
+            <i class="fa fa-video withoutpuburl"></i>
+          {% endif %}
+        </td>
+        <td>
+          <i class="fa fa-link withoutpuburl">{% comment %}TODO render bibtex! {% endcomment %}</i>
+        </td>
       </tr>
       <tr>
         <td>
-          {% if pub.publisher_url %}
-            <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-link withpuburl"></i></a>
+        {% if data_url %}
+            <a href="{{ data_url }}" target="_blank"><i class="fa fa-database withpuburl"></i></a>
+        {% else %}
+            <i class="fa fa-database withoutpuburl"></i>
+        {% endif %}
+        </td>
+        <td>
+          {% if code_url %}
+            <a href="{{ code_url }}" target="_blank"><i class="fa fa-code withpuburl"></i></a>
           {% else %}
-            <i class="fa fa-link withoutpuburl"></i>TODO TODO TODO
+            <i class="fa fa-code withoutpuburl"></i>
           {% endif %}
         </td>
         <td>
-          {% if pub.web_url %}
-            <a href="{{ pub.web_url }}" target="_blank"><i class="fa fa-globe-europe withpuburl"></i></a>
+          {% if external_url %}
+            <a href="{{ external_url }}" target="_blank"><i class="fa fa-globe-americas withpuburl"></i></a>
           {% else %}
-            {% if pub.video_url %}
-              <a href="{{ pub.video_url }}" target="_blank"><i class="fa fa-photo-video withpuburl"></i></a>
-            {% else %}
-              <i class="fa fa-globe-europe withoutpuburl"></i>
-            {% endif %}
+            <i class="fa fa-globe-americas withoutpuburl"></i>
           {% endif %}
         </td>
-        <td>
-            {% if pub.code_url %}
-            <a href="{{ pub.code_url }}" target="_blank"><i class="fa fa-file-code withpuburl"></i></a>
-            {% else %}
-            <i class="fa fa-file-code withoutpuburl"></i>
-            {% endif %}
-        </td>
-        </tr>
+      </tr>
     </table>
   </td>
   </tr>
