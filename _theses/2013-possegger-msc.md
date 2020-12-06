@@ -4,7 +4,7 @@ year: 2013
 authors: "Horst Possegger"
 thesis_type: "Master's thesis"
 venue: "Graz University of Technology, Faculty of Computer Science"
+venue_url: https://www.tugraz.at/fakultaeten/csbme/home/
 pdf_url: /files/possegger-msc.pdf
 publisher_url: https://diglib.tugraz.at/exploiting-3d-information-for-robust-real-time-tracking-of-multiple-objects-in-complex-scenarios-2013
-project_url: https://www.tugraz.at/fakultaeten/csbme/home/
 ---
