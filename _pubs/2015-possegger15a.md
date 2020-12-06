@@ -6,6 +6,7 @@ venue: "In Proc. of the IEEE Conference on Computer Vision and Pattern Recogniti
 venue_abbrev: CVPR
 pdf_url: https://openaccess.thecvf.com/content_cvpr_2015/papers/Possegger_In_Defense_of_2015_CVPR_paper.pdf
 doi_url: https://doi.org/10.1109/CVPR.2015.7298823
+slide_url: /files/possegger-cvpr15-poster.pdf
 video_url: https://vimeo.com/121649922
 code_url: https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/dat/
 teaser_img: /images/teaser/dat-color-dist.webp
