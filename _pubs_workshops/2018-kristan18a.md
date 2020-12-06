@@ -10,4 +10,5 @@ slide_url: http://data.votchallenge.net/vot2018/presentations/vot2018_presentati
 data_url: http://data.votchallenge.net/vot2018/vot2018_results.zip
 code_url: http://data.votchallenge.net/vot2018/trackers/DAT-code-2018-06-15T07_36_06.008096.zip
 project_url: https://www.votchallenge.net/
+teaser_img: /images/teaser/vot2018_logo.png
 ---

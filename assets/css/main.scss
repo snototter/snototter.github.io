@@ -121,3 +121,11 @@ td.puburls table {
 
 i.withpuburl { color: black; }
 i.withoutpuburl { color: #dfdfdf; }
+
+.pubteaser {
+  text-align: center;
+  img {
+    max-width: 100%;
+    max-height: 150px;
+  }
+}

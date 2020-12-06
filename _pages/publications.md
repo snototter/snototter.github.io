@@ -4,14 +4,12 @@ permalink: /publications/
 author_profile: true
 ---
 
-Here you'll find a (mostly) up-to-date list of my publications.
+Here you'll find a (mostly) up-to-date list of my publications, grouped into [conference & journal papers](#cjproc), publications related to [non-peer-reviewed workshops & challenges](#chg), and [my theses](#theses).
 
 {% include base_path %}
 {% assign author = site.author %}
 
-Still to be filled with actual content!
-
-<h2 class="pubheader">Conference Proceedings &amp; Journal Articles</h2>
+<h2 id="cjproc" class="pubheader">Conference Proceedings &amp; Journal Articles</h2>
 <table class="pubtable">
   <tbody>
     {% for pub in site.pubs reversed %}
@@ -20,7 +18,7 @@ Still to be filled with actual content!
   </tbody>
 </table>
 
-<h2 class="pubheader">Workshops &amp; Challenges</h2>
+<h2 id="chg" class="pubheader">Workshops &amp; Challenges</h2>
 <table class="pubtable">
   <tbody>
     {% for pub in site.pubs_workshops reversed %}
@@ -30,7 +28,7 @@ Still to be filled with actual content!
 </table>
 
 
-<h2 class="pubheader">Theses</h2>
+<h2 id="theses" class="pubheader">Theses</h2>
 <table class="pubtable">
   <tbody>
     {% for pub in site.theses reversed %}

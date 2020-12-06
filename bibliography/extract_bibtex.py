@@ -214,6 +214,9 @@ def dump_markdown(output_folder, entry):
     # External project page
     if 'project_url' in entry.fields:
         md += f'project_url: {entry.fields["project_url"]}\n'
+    # Teaser image
+    if 'teaser_img' in entry.fields:
+        md += f'teaser_img: {entry.fields["teaser_img"]}\n'
     md += '---\n'
 
 

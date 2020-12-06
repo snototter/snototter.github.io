@@ -47,16 +47,22 @@
 {% endif %}
 
 <tr class="pubentry">
-  <td class="pubyear">{{ pub.year }}</td>
-  <td class="pubinfo">
+  {% if pub.teaser_img %}
+    <td class="pubteaser">
+      <img src="{{ pub.teaser_img }}"/>
+    </td>
+    <td class="pubinfo">
+  {% else %}
+    <td class="pubinfo" colspan="2">
+  {% endif %}
     <p><b>{{ pub.title }}</b></p>
     <p>{{ pub.authors }}{% if pub.thesis_type %} - {{ pub.thesis_type }}{% endif %}</p>
     {% if pub.venue %}
       <p>
       {% if pub.venue_url %}
-        <a href="{{ pub.venue_url }}"><i>{{ pub.venue }}</i></a>
+        <a href="{{ pub.venue_url }}"><i>{{ pub.venue }}</i></a>, {{ pub.year }}.
       {% else %}
-        <i>{{ pub.venue }}</i>
+        <i>{{ pub.venue }}</i>, {{ pub.year }}.
       {% endif %}
       </p>
     {% endif %}

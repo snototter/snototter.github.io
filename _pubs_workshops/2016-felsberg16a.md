@@ -10,4 +10,5 @@ slide_url: http://data.votchallenge.net/vot2016/presentations/vot_tir_2016_prese
 data_url: http://data.votchallenge.net/vot2016/vot-tir2016_results.zip
 code_url: https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/dat/
 project_url: https://www.votchallenge.net
+teaser_img: /images/teaser/vot2016_logo.png
 ---

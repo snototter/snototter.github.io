@@ -10,4 +10,5 @@ slide_url: http://data.votchallenge.net/vot2015/presentations/vot_2015_presentat
 data_url: http://data.votchallenge.net/vot2015/vot2015_results.zip
 code_url: https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/dat/
 project_url: https://www.votchallenge.net
+teaser_img: /images/teaser/vot2015_logo.png
 ---
