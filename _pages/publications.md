@@ -37,16 +37,25 @@ Here you'll find a (mostly) up-to-date list of my publications, grouped into [co
   </tbody>
 </table>
 
+<div class="bibpopup" onclick="toggleBibPopup()">Toggle Popup
+  <span class="bibpopuptext" id="bib-somekey">
+  <p>
+      border: 1px dashed #B3B2B2;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #F8F8F8;
+    font-family: monospace;
+    font-size: 13px;
+    </p>
+  </span>
+</div>
 
-
-{% comment %}
-## Publications (Peer-Reviewed)
-
-
-## Scientific Presentations
-Not including workshops, teaching, etc.
-
-
-## Other Media
-ORF, Pro7, ...
-{% endcomment %}
+<script>
+// When the user clicks on div, open the popup
+function toggleBibPopup() {
+  var popup = document.getElementById("bib-somekey");
+  popup.classList.toggle("show");
+}
+</script>
