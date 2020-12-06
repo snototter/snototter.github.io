@@ -8,5 +8,5 @@ pdf_url: /files/possegger-cvww12a.pdf
 video_url: https://vimeo.com/35314941
 data_url: https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/vptz/
 code_url: https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/vptz/
-teaser_img: /images/teaser/vptz.png
+teaser_img: /images/teaser/vptz.webp
 ---

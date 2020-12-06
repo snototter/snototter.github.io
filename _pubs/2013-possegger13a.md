@@ -10,5 +10,5 @@ supplemental_url: /files/possegger-cvpr13-spotlight.pdf
 slide_url: /files/possegger-cvpr13-poster.pdf
 video_url: https://vimeo.com/62938855
 data_url: https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/lab6/
-teaser_img: /images/teaser/r2t2.png
+teaser_img: /images/teaser/r2t2.webp
 ---
