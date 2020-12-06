@@ -28,15 +28,17 @@
         <a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i></a>
     {% endif %}
     <br/>
+    {% comment %}
     <i class="fab fa-fw empty-icon"></i>
+    {% endcomment %}
     {% if author.orcid %}
-        <a href="{{ author.orcid }}"><i class="ai ai-orcid"></i></a>
+        <a href="{{ author.orcid }}"><i class="ai ai-orcid" aria-hidden="true"></i></a>
     {% endif %}
     {% if author.dblp %}
-        <a href="{{ author.dblp }}"><i class="ai ai-dblp"></i></a>
+        <a href="{{ author.dblp }}"><i class="ai ai-dblp" aria-hidden="true"></i></a>
     {% endif %}
     {% if author.googlescholar %}
-    <a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap"></i></a>
+    <a href="{{ author.googlescholar }}"><i class="fas fa-fw fa-graduation-cap" aria-hidden="true"></i></a>
     {% endif %}
 
     {% comment %}

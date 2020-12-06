@@ -13,7 +13,4 @@ fi
 
 python extract_bibtex.py theses.bib ../_theses
 python extract_bibtex.py pubs-other.bib ../_pubs_workshops
-#python extract_bibtex.py pubs-conferences.bib ../_pubs_conferences
-#TODO ../_pubs_jrnl
-
-
+python extract_bibtex.py pubs-reviewed.bib ../_pubs

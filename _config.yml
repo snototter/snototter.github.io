@@ -47,7 +47,7 @@ analytics:
 # Site Author
 author:
   name             : 
-  avatar           : "brick.jpg"
+  avatar           : "brick.webp"
   bio              : "Computer Vision by profession, Tinkering by passion"
   location         : 
   maplocation      : https://www.google.com/maps/place/Graz
@@ -135,8 +135,7 @@ kramdown:
 
 # Collections
 collections:
-  - pubs_conferences
-  - pubs_journals
+  - pubs
   - pubs_workshops
   - theses
   #publications:

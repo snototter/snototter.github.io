@@ -172,6 +172,12 @@ def dump_markdown(output_folder, entry):
         md += f'venue_url: {entry.fields["venue_url"]}\n'
     if 'pdf_url' in entry.fields:
         md += f'pdf_url: {entry.fields["pdf_url"]}\n'
+    if 'arxiv_url' in entry.fields:
+        md += f'arxiv_url: {entry.fields["arxiv_url"]}\n'
+    if 'doi_url' in entry.fields:
+        md += f'doi_url: {entry.fields["doi_url"]}\n'
+    if 'project_url' in entry.fields:
+        md += f'project_url: {entry.fields["project_url"]}\n'
     if 'publisher_url' in entry.fields:
         md += f'publisher_url: {entry.fields["publisher_url"]}\n'
     if 'video_url' in entry.fields:

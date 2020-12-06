@@ -5,5 +5,6 @@ authors: Matej Kristan, Ji&rcaron;&iacute; Matas, Ale&scaron; Leonardis, Michael
 venue: In Proc. of the Workshop on the Visual Object Tracking Challenge (VOT, in conjunction with ICCV)
 venue_url: https://www.votchallenge.net/vot2015/
 publisher_url: http://data.votchallenge.net/vot2015/presentations/vot_2015_paper.pdf
+code_url: http://data.votchallenge.net/vot2015/vot2015_results.zip
 slide_url: http://data.votchallenge.net/vot2015/presentations/vot_2015_presentation.pdf
 ---

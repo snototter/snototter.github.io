@@ -57,14 +57,22 @@
           {% if pub.pdf_url %}
             <a href="{{ pub.pdf_url }}" target="_blank"><i class="fa fa-file-pdf withpuburl"></i></a>
           {% else %}
-            <i class="fa fa-file-pdf withoutpuburl"></i>
+            {% if pub.arxiv_url %}
+              <a href="{{ pub.arxiv_url }}" target="_blank"><i class="ai ai-arxiv withpuburl"></i></a>
+            {% else %}
+              <i class="fa fa-file-pdf withoutpuburl"></i>
+            {% endif %}
           {% endif %}
         </td>
         <td>
-          {% if pub.publisher_url %}
-            <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-book-open withpuburl"></i></a>
+          {% if pub.doi_url %}
+            <a href="{{ pub.doi_url }}" target="_blank"><i class="ai ai-doi withpuburl"></i></a>
           {% else %}
-            <i class="fa fa-book-open withoutpuburl"></i>
+            {% if pub.publisher_url %}
+              <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-book-open withpuburl"></i></a>
+            {% else %}
+              <i class="ai ai-doi withoutpuburl"></i>
+            {% endif %}
           {% endif %}
         </td>
         <td>
@@ -77,18 +85,22 @@
       </tr>
       <tr>
         <td>
-            {% if pub.pdf_url %}
-            <a href="{{ pub.pdf_url }}" target="_blank"><i class="fa fa-globe-europe withpuburl"></i></a>
-            {% else %}
-            <i class="fa fa-globe-europe withoutpuburl"></i>
-            {% endif %}
+          {% if pub.publisher_url %}
+            <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-link withpuburl"></i></a>
+          {% else %}
+            <i class="fa fa-link withoutpuburl"></i>TODO TODO TODO
+          {% endif %}
         </td>
         <td>
-            {% if pub.publisher_url %}
-            <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-link withpuburl"></i></a>
+          {% if pub.web_url %}
+            <a href="{{ pub.web_url }}" target="_blank"><i class="fa fa-globe-europe withpuburl"></i></a>
+          {% else %}
+            {% if pub.video_url %}
+              <a href="{{ pub.video_url }}" target="_blank"><i class="fa fa-photo-video withpuburl"></i></a>
             {% else %}
-            <i class="fa fa-link withoutpuburl"></i>TODO
+              <i class="fa fa-globe-europe withoutpuburl"></i>
             {% endif %}
+          {% endif %}
         </td>
         <td>
             {% if pub.code_url %}

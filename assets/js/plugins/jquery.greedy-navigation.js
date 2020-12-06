@@ -24,7 +24,7 @@ function updateNav() {
 
     // Move item to the hidden list
     $vlinks.children().last().prependTo($hlinks);
-
+    
     // Show the dropdown btn
     if($btn.hasClass('hidden')) {
       $btn.removeClass('hidden');

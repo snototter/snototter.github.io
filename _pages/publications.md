@@ -11,24 +11,14 @@ Here you'll find a (mostly) up-to-date list of my publications.
 
 Still to be filled with actual content!
 
-<h2 class="pubheader">Conference Papers</h2>
+<h2 class="pubheader">Conference Proceedings &amp; Journal Articles</h2>
 <table class="pubtable">
   <tbody>
-    {% for pub in site.pubs_conferences reversed %}
+    {% for pub in site.pubs reversed %}
       {% include pubentry.html %}
     {% endfor %}
   </tbody>
 </table>
-
-<h2 class="pubheader">Journal Articles</h2>
-<table class="pubtable">
-  <tbody>
-    {% for pub in site.pubs_journals reversed %}
-      {% include pubentry.html %}
-    {% endfor %}
-  </tbody>
-</table>
-
 
 <h2 class="pubheader">Workshops &amp; Challenges</h2>
 <table class="pubtable">

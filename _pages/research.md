@@ -9,7 +9,7 @@ redirect_from:
   - /research
 ---
 
-![LRS](/images/lrs.jpg){: style="float: right; padding-top: 0.5em;"}
+![LRS](/images/lrs.webp){: style="float: right; padding-top: 0.5em; max-width: 40%;"}
 
 I'm a senior scientist coordinating the __Learning, Recognition & Surveillance (LRS)__ workgroup at the __Institute of Computer Graphics & Vision (ICG)__, Graz University of Technology.
 

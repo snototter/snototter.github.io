@@ -116,11 +116,15 @@ td.puburls table {
   i {
       width: 1.2em;
       font-size: 2em; //FIXME
+
+      .ai-arxiv {
+          font-size: 5em;
+      }
   }
 }
 
-.withpuburl { color: black; }
-.withoutpuburl { color: #dfdfdf; }
+i.withpuburl { color: black; }
+i.withoutpuburl { color: #dfdfdf; }
 
 // .puburldiv {
 //   font-size: 1.5em;
