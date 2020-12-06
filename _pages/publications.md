@@ -4,14 +4,12 @@ permalink: /publications/
 author_profile: true
 ---
 
-<!--TODO do we need this???? layout: archive
-TODO group
--->
+Here you'll find a (mostly) up-to-date list of my publications.
 
 {% include base_path %}
 {% assign author = site.author %}
 
-To be filled with actual content!
+Still to be filled with actual content!
 
 <h2 class="pubheader">Conference Papers</h2>
 <table class="pubtable">
