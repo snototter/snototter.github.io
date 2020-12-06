@@ -111,7 +111,8 @@ def html_escape(text):
         # Finally, strip parentheses and unused commands
         ('\\emph', ''), ('\\textbf', ''),
         ('et al.', '<i>et al.</i>'),
-        ('{', ''), ('}', '')
+        ('{', ''), ('}', ''),
+        ('--', '&ndash;')
     ]   
     for search, repl in escape_entities:
         text = text.replace(search, repl)
@@ -126,7 +127,10 @@ def html_escape(text):
 
 def author_name(p):
     """Output the pybtex.Person's name"""
-    tokens = p.first_names + p.middle_names + p.prelast_names + p.last_names
+    def abbrev_first_name(fn):
+        return fn[:1] + '.'
+
+    tokens = [abbrev_first_name(fn) for fn in p.first_names] + p.middle_names + p.prelast_names + p.last_names
     return ' '.join(tokens)
 
 
@@ -177,8 +181,18 @@ def dump_markdown(output_folder, entry):
         venue = 'In ' + entry.fields['booktitle']
     elif entry.type in ['article']:
         venue = entry.fields['journal']
-        #page_str = entry.fields['pages'] # todo if it really contains pages (pre-print!)
-        #TODO + vol/issue, etc
+        if 'volume' in entry.fields:
+            venue += ' ' + entry.fields['volume']
+            num = None
+            if 'number' in entry.fields:
+                num = entry.fields['number']
+            if 'issue' in entry.fields:
+                num = entry.fields['issue']
+            if num is not None:
+                venue += f'({num})'
+            
+            if 'pages' in entry.fields:
+                venue += ':' + entry.fields['pages']
 
     venue = html_escape(venue)
     md += f'venue: "{venue}"\n'
@@ -186,6 +200,8 @@ def dump_markdown(output_folder, entry):
     # Add download/further links
     if 'venue_url' in entry.fields:
         md += f'venue_url: {entry.fields["venue_url"]}\n'
+    if 'venue_abbreviation' in entry.fields:
+        md += f'venue_abbrev: {entry.fields["venue_abbreviation"]}\n'
     # Author/open access pdf
     if 'pdf_url' in entry.fields:
         md += f'pdf_url: {entry.fields["pdf_url"]}\n'

@@ -1,7 +1,7 @@
 ---
 title: "Contextual Cues for Causal Visual Tracking"
 year: 2018
-authors: "Horst Possegger"
+authors: "H. Possegger"
 thesis_type: "PhD thesis"
 venue: "Graz University of Technology, Faculty of Computer Science and Biomedical Engineering"
 venue_url: https://www.tugraz.at/fakultaeten/csbme/home/
