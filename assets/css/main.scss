@@ -57,3 +57,82 @@
 h1.page__title {
   margin-top: 1em;
 }
+
+h2.pubheader {
+  font-size: 1.5em;
+  font-weight: 600;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+table.pubtable {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 0.8em;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  
+  td {
+    text-align: left;
+    padding: 0.5em 0.5em;
+    border: none;
+  }
+
+  th {
+    text-align:left;
+    border-bottom:1px solid #afafaf;
+    background: #ffffff;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  tr.pubentry:nth-child(odd) {
+  background: #efefef;
+  }
+}
+  
+
+.pubentry {
+    p {
+      margin: 0 0 0 0.3em;
+    }
+  }
+
+
+
+dt {
+  color:#444;
+  font-weight:500;
+}
+
+td.puburls table {
+  border: none;
+
+  td {
+    text-align: center;
+  }
+
+  i {
+      width: 1.2em;
+      font-size: 2em; //FIXME
+  }
+}
+
+.withpuburl { color: black; }
+.withoutpuburl { color: #dfdfdf; }
+
+// .puburldiv {
+//   font-size: 1.5em;
+//   float: left;
+
+//   i {
+//     width: 1.5em;
+//   }
+// }
+
+
+//th {
+//color:#444;
+//}
+

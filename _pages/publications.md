@@ -13,10 +13,44 @@ TODO group
 
 To be filled with actual content!
 
+<h2 class="pubheader">Conference Papers</h2>
+<table class="pubtable">
+  <tbody>
+    {% for pub in site.pubs_conferences reversed %}
+      {% include pubentry.html %}
+    {% endfor %}
+  </tbody>
+</table>
 
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<h2 class="pubheader">Journal Articles</h2>
+<table class="pubtable">
+  <tbody>
+    {% for pub in site.pubs_journals reversed %}
+      {% include pubentry.html %}
+    {% endfor %}
+  </tbody>
+</table>
+
+
+<h2 class="pubheader">Workshops &amp; Challenges</h2>
+<table class="pubtable">
+  <tbody>
+    {% for pub in site.pubs_workshops reversed %}
+      {% include pubentry.html %}
+    {% endfor %}
+  </tbody>
+</table>
+
+
+<h2 class="pubheader">Theses</h2>
+<table class="pubtable">
+  <tbody>
+    {% for pub in site.theses reversed %}
+      {% include pubentry.html %}
+    {% endfor %}
+  </tbody>
+</table>
+
 
 
 {% comment %}

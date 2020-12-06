@@ -1,0 +1,143 @@
+<!--<td class="puburls">
+    <div class="puburldiv">
+      {% if pub.pdf_url %}
+        <a href="{{ pub.pdf_url }}" target="_blank"><i class="fa fa-file-pdf"></i></a>
+      {% else %}
+        <i class="fa fa-file-pdf"></i>
+      {% endif %}
+    </div>
+    <div class="puburldiv">
+      {% if pub.publisher_url %}
+        <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-book-open"></i></a>
+      {% else %}
+        <i class="fa fa-book-open"></i>
+      {% endif %}
+    </div>
+    <div class="puburldiv">
+      {% if pub.code_url %}
+        <a href="{{ pub.code_url }}" target="_blank"><i class="fa fa-file-code"></i></a>
+      {% else %}
+        <i class="fa fa-file-code"></i>
+      {% endif %}
+    </div>
+  </td>
+  
+    fa fa-globe-europe
+    fa-book-open
+    fa-link
+    fa-code
+    fa ODER fas ODER far file-code
+    laptop-code
+    code-branch
+    fa-desktop
+    fa-tv  
+    fa-file-pdf-->
+
+<tr class="pubentry">
+  <td class="pubyear">{{ pub.year }}</td>
+  <td class="pubinfo">
+    <p><b>{{ pub.title }}</b></p>
+    <p>{{ pub.authors }}{% if pub.thesis_type %} - {{ pub.thesis_type }}{% endif %}</p>
+    {% if pub.venue %}
+      <p>
+      {% if pub.venue_url %}
+        <a href="{{ pub.venue_url }}"><i>{{ pub.venue }}</i></a>
+      {% else %}
+        <i>{{ pub.venue }}</i>
+      {% endif %}
+      </p>
+    {% endif %}
+  </td>
+  
+    
+  <td class="puburls">
+    <table>
+      <tr>
+        <td>
+          {% if pub.pdf_url %}
+            <a href="{{ pub.pdf_url }}" target="_blank"><i class="fa fa-file-pdf withpuburl"></i></a>
+          {% else %}
+            <i class="fa fa-file-pdf withoutpuburl"></i>
+          {% endif %}
+        </td>
+        <td>
+          {% if pub.publisher_url %}
+            <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-book-open withpuburl"></i></a>
+          {% else %}
+            <i class="fa fa-book-open withoutpuburl"></i>
+          {% endif %}
+        </td>
+        <td>
+          {% if pub.slide_url %}
+            <a href="{{ pub.slide_url }}" target="_blank"><i class="fa fa-desktop withpuburl"></i></a>
+          {% else %}
+            <i class="fa fa-desktop withoutpuburl"></i>
+          {% endif %}
+        </td>
+      </tr>
+      <tr>
+        <td>
+            {% if pub.pdf_url %}
+            <a href="{{ pub.pdf_url }}" target="_blank"><i class="fa fa-globe-europe withpuburl"></i></a>
+            {% else %}
+            <i class="fa fa-globe-europe withoutpuburl"></i>
+            {% endif %}
+        </td>
+        <td>
+            {% if pub.publisher_url %}
+            <a href="{{ pub.publisher_url }}" target="_blank"><i class="fa fa-link withpuburl"></i></a>
+            {% else %}
+            <i class="fa fa-link withoutpuburl"></i>TODO
+            {% endif %}
+        </td>
+        <td>
+            {% if pub.code_url %}
+            <a href="{{ pub.code_url }}" target="_blank"><i class="fa fa-file-code withpuburl"></i></a>
+            {% else %}
+            <i class="fa fa-file-code withoutpuburl"></i>
+            {% endif %}
+        </td>
+        </tr>
+    </table>
+  </td>
+  </tr>
+
+   <!--<td>{{pub.authors}} - <b><i>"{{post.title}}"</i></b> - {% if post.vurl %}<a href="{{post.vurl}}">{{post.venue}}</a>{% else %}{{post.venue}}{% endif %}{% if post.vatt %}, {{post.vatt}}{% endif %}{% if post.cveurl %}, <a href="{{post.cveurl}}"><i class="fa fa-bug"></i> {{post.cve}}</a>{% else %}{{post.cve}}{% endif %}.</td>
+    <td>
+      <table class="dltable">
+        <tr>
+          <td class="downloadpdf">
+            {% if post.pdf %}<a href="{{post.pdf}}" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+            {% else %} <i class="fa fa-file-pdf-o"></i>
+            {% endif %}
+          </td>
+          <td class="download">
+            {% if post.pub %}<a href="{{post.pub}}" target="_blank"><i class="fa fa-book"></i></a>
+            {% else %} <i class="fa fa-book"></i>
+            {% endif %}
+          </td>
+          <td class="downloadpdf">
+            {% if post.talk %}<a href="{{post.talk}}" target="_blank"><i class="fa fa-television"></i></a>
+            {% else %} <i class="fa fa-television"></i>
+            {% endif %}
+          </td>
+        </tr>
+        <tr>
+          <td class="download">
+            {% if post.web %}<a href="{{post.web}}" target="_blank"><i class="fa fa-globe"></i></a>
+            {% else %} <i class="fa fa-globe"></i>
+            {% endif %}
+          </td>
+          <td class="download">
+            {% if post.bib %}<a href="{{post.bib}}" target="_blank"><i class="fa fa-link"></i></a>
+            {% else %} <i class="fa fa-link"></i>
+            {% endif %}
+          </td>
+          <td class="download">
+            {% if post.github %}<a href="{{post.github}}" target="_blank"><i class="fa fa-code"></i></a>
+            {% else %} <i class="fa fa-code"></i>
+            {% endif %}
+          </td>
+        </tr>
+      </table>
+    </td>-->

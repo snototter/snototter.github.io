@@ -1,0 +1,9 @@
+---
+title: "The Visual Object Tracking VOT2015 challenge results"
+year: 2015
+authors: Matej Kristan, Ji&rcaron;&iacute; Matas, Ale&scaron; Leonardis, Michael Felsberg, Luka &Ccaron;ehovin, Gustavo Fern&aacute;ndez, <i>et al.</i>
+venue: In Proc. of the Workshop on the Visual Object Tracking Challenge (VOT, in conjunction with ICCV)
+venue_url: https://www.votchallenge.net/vot2015/
+publisher_url: http://data.votchallenge.net/vot2015/presentations/vot_2015_paper.pdf
+slide_url: http://data.votchallenge.net/vot2015/presentations/vot_2015_presentation.pdf
+---
