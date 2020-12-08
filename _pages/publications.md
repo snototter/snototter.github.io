@@ -37,6 +37,8 @@ Here you'll find a (mostly) up-to-date list of my publications, grouped into [co
   </tbody>
 </table>
 
+{% comment %}
+TODO potential bibtex popup solution
 <div class="bibpopup" onclick="toggleBibPopup()">Toggle Popup
   <span class="bibpopuptext" id="bib-somekey">
   <p>
@@ -59,3 +61,4 @@ function toggleBibPopup() {
   popup.classList.toggle("show");
 }
 </script>
+{% endcomment %}

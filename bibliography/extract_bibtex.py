@@ -169,6 +169,7 @@ def dump_markdown(output_folder, entry):
 
     md += f'year: {year}\n'
     md += f'authors: "{authors}"\n'
+    venue_extra = None
     if entry.type in ['phdthesis', 'mscthesis', 'bscthesis']:
         thesis_type = {
             'phdthesis': 'PhD thesis',
@@ -182,19 +183,20 @@ def dump_markdown(output_folder, entry):
     elif entry.type in ['article']:
         venue = entry.fields['journal']
         if 'volume' in entry.fields:
-            venue += ' ' + entry.fields['volume']
+            venue_extra = entry.fields['volume']
             num = None
             if 'number' in entry.fields:
                 num = entry.fields['number']
             if 'issue' in entry.fields:
                 num = entry.fields['issue']
             if num is not None:
-                venue += f'({num})'
+                venue_extra += f'({num})'
             
             if 'pages' in entry.fields:
-                venue += ':' + entry.fields['pages']
+                venue_extra += ':' + entry.fields['pages']
 
     venue = html_escape(venue)
+    venue_extra = None if venue_extra is None else html_escape(venue_extra)
     md += f'venue: "{venue}"\n'
     
     # Add download/further links
@@ -202,6 +204,8 @@ def dump_markdown(output_folder, entry):
         md += f'venue_url: {entry.fields["venue_url"]}\n'
     if 'venue_abbreviation' in entry.fields:
         md += f'venue_abbrev: {entry.fields["venue_abbreviation"]}\n'
+    if venue_extra is not None:
+        md += f'venue_extra: "{venue_extra}"\n'
     # Author/open access pdf
     if 'pdf_url' in entry.fields:
         md += f'pdf_url: {entry.fields["pdf_url"]}\n'
@@ -227,9 +231,9 @@ def dump_markdown(output_folder, entry):
     # Code download
     if 'code_url' in entry.fields:
         md += f'code_url: {entry.fields["code_url"]}\n'
-    # External project page
-    if 'project_url' in entry.fields:
-        md += f'project_url: {entry.fields["project_url"]}\n'
+    # External website
+    if 'external_url' in entry.fields:
+        md += f'external_url: {entry.fields["external_url"]}\n'
     # Teaser image
     if 'teaser_img' in entry.fields:
         md += f'teaser_img: {entry.fields["teaser_img"]}\n'

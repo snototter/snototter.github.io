@@ -42,8 +42,8 @@
 {% endif %}
 
 {% assign external_url = nil %}
-{% if pub.project_url %}
-  {% assign external_url = pub.project_url %}
+{% if pub.external_url %}
+  {% assign external_url = pub.external_url %}
 {% endif %}
 
 <tr class="pubentry">
@@ -59,10 +59,19 @@
     <p>{{ pub.authors }}{% if pub.thesis_type %} - {{ pub.thesis_type }}{% endif %}</p>
     {% if pub.venue %}
       <p>
-      {% if pub.venue_url %}
-        <a href="{{ pub.venue_url }}"><i>{{ pub.venue }}</i></a>, {{ pub.year }}.
+      {% if pub.venue_abbrev %}
+        {% assign venue_html = pub.venue | append: " (<b>" | append: pub.venue_abbrev | append: "</b>)" %}
       {% else %}
-        <i>{{ pub.venue }}</i>, {{ pub.year }}.
+        {% assign venue_html = pub.venue %}
+      {% endif %}
+      {% if pub.venue_url %}
+
+      {% if pub.venue_extra %}
+        {% assign venue_html = venue_html | append: " " | append: pub.venue_extra %}
+      {% endif %}
+        <a href="{{ pub.venue_url }}"><i>{{ venue_html }}</i></a>, {{ pub.year }}.
+      {% else %}
+        <i>{{ venue_html }}</i>, {{ pub.year }}.
       {% endif %}
       </p>
     {% endif %}
