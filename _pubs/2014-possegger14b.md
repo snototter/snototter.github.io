@@ -9,5 +9,6 @@ pdf_url: /files/papers/rudelsdorfer-ijcss14.pdf
 publisher_url: http://iacss.org/index.php?id=147
 supplemental_url: https://static.uni-graz.at/fileadmin/urbi-institute/Sportwissenschaft/Dokumente/Software/MASA_User-Guide20181101.pdf
 code_url: https://bewegungswissenschaften.uni-graz.at/de/forschen/downloads/
+external_url: http://www.iacss.org/index.php?id=30
 teaser_img: /images/teaser/masa.webp
 ---

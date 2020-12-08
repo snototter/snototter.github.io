@@ -1,11 +1,11 @@
 ---
 permalink: /research/
-title: "Research Overview"
-excerpt: "Research Overview"
+title: "Research"
 author_profile: true
 redirect_from: 
   - /
   - /index.html
+  - /about
   - /research
 ---
 

@@ -8,5 +8,5 @@ pdf_url: /files/papers/possegger-phd.pdf
 publisher_url: https://diglib.tugraz.at/contextual-cues-for-causal-visual-tracking-2018
 slide_url: /files/presentations/phd-defense.tar.gz
 external_url: https://www.tugraz.at/fakultaeten/csbme/home/
-teaser_img: /images/teaser/phd-hat.webp
+teaser_img: /images/teaser/hat-phd.webp
 ---
