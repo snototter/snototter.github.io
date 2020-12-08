@@ -6,7 +6,7 @@ venue: "In Proc. of the IEEE Conference on Computer Vision and Pattern Recogniti
 venue_abbrev: CVPR
 pdf_url: https://openaccess.thecvf.com/content_cvpr_2015/papers/Mauthner_Encoding_Based_Saliency_2015_CVPR_paper.pdf
 doi_url: https://doi.org/10.1109/CVPR.2015.7298864
-supplemental_url: /files/mauthner-cvpr15-supplemental.pdf
+supplemental_url: /files/papers/mauthner-cvpr15-supplemental.pdf
 video_url: https://vimeo.com/123386676
 external_url: http://www.pamitc.org/cvpr15/
 teaser_img: /images/teaser/saliency.webp
