@@ -54,6 +54,23 @@
   font-size: 1.3em;
 }
 
+h2 i.totopnav {
+  color: black;
+  font-size: 0.6em;
+  margin-left: 1em;
+  vertical-align: top;
+}
+
+h2.cd-header {
+  border: none;
+}
+div.cd-detail {
+  margin-left: 2em;
+  img {
+    max-width: 100%;
+  }
+}
+
 h1.page__title {
   margin-top: 1em;
 }

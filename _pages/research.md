@@ -15,7 +15,7 @@ I'm a senior scientist coordinating the __Learning, Recognition & Surveillance (
 My PhD research focused on visual object tracking, leveraging context information for generic single object tracking, as well as multi-object tracking algorithms.
 Currently, my research interests include (multiple) object tracking and detection in both 2D and 3D, human behavior analysis, and video analysis in general.
 
-## Selected Projects
+<h2>Selected Projects <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
 To be completed...
 {% comment %}
 add research highlights (?)
@@ -23,7 +23,7 @@ add project overview
 {% endcomment %}
 
 
-## Awards & Honors
+<h2>Awards & Honors  <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
 * Winner of the **Austrian Road Safety Board Research Award** (Forschungspreis des [Kuratoriums f&uuml;r Verkehrssicherheit, KfV](https://www.kfv.at/)), 2020
 * **Outstanding Reviewer**, [European Conference on Computer Vision (ECCV)](https://eccv2020.eu/), 2020
 * [NVIDIA](https://developer.nvidia.com/) Higher Education and Research Grant recipient, 2017
@@ -33,7 +33,7 @@ add project overview
 * **Academic excellence scholarships** from the [Faculty of Computer Science](https://www.tugraz.at/fakultaeten/csbme/home/), Graz University of Technology, 2008, 2009, 2010 and 2011
 
 
-## Professional Services
+<h2>Professional Services <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
 <!-- Been there, done that -->
 Reviewing for conferences (since 2015), including:
 * [IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)](https://en.wikipedia.org/wiki/Conference_on_Computer_Vision_and_Pattern_Recognition)

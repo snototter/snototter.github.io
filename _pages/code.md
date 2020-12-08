@@ -8,11 +8,34 @@ redirect_from:
   - /tinkering
 ---
 
-Still to be filled with actual content
+Still to be filled with additional content!
+
+
+<h2 id="vito" class="cd-header">vito (Vision Tools) <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<div class="cd-detail">
+<p>
+<a href="https://pypi.org/project/vito"><img src="https://badge.fury.io/py/vito.svg" alt="View on PyPI"/></a>
+<a href="https://pypi.org/project/vito"><img src="https://img.shields.io/pypi/dm/vito.svg" alt="PyPI - Downloads"/></a>
+<a href="https://travis-ci.com/snototter/vito"><img src="https://travis-ci.com/snototter/vito.svg?branch=master" alt="Build Status"/></a>
+<a href="https://coveralls.io/github/snototter/vito?branch=master"><img src="https://coveralls.io/repos/github/snototter/vito/badge.svg?branch=master" alt="Coverage Status"/></a>
+<a href="https://github.com/snototter/vito/blob/master/LICENSE?raw=true"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"/></a>
+</p>
+<p>
+A light-weight Python utility package for common computer vision &amp; image manipulation tasks.
+</p>
+</div>
+
+
+
+
 {% comment %}
+
+<h2 id="iminspect" class="cd-header">iminspect <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<div class="cd-detail">
+TODO
+</div>
+
 # Software
-## iminspect
-## vito
 ## vitocpp
 # Data
 ## ICG Lab6
