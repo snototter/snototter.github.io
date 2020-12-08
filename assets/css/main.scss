@@ -111,6 +111,7 @@ td.puburls table {
 
   td {
     text-align: center;
+    padding: 0.75em;
   }
 
   i {
@@ -125,10 +126,15 @@ i.withoutpuburl { color: #dfdfdf; }
 table.pubtable td.pubteaser {
   text-align: center;
   font-weight: 800;
+  padding: 1em 1em 1em 1em;
   img {
     max-width: 100%;
     max-height: 150px;
   }
+}
+
+table.putable td.pubinfo {
+  padding: 1em 0.5em 1em 0.5em;
 }
 
 //TODO popup works - but simply displaying a tr below would be much simpler and likely more portable...
