@@ -64,11 +64,10 @@
       {% else %}
         {% assign venue_html = pub.venue %}
       {% endif %}
-      {% if pub.venue_url %}
-
       {% if pub.venue_extra %}
         {% assign venue_html = venue_html | append: " " | append: pub.venue_extra %}
       {% endif %}
+      {% if pub.venue_url %}
         <a href="{{ pub.venue_url }}"><i>{{ venue_html }}</i></a>, {{ pub.year }}.
       {% else %}
         <i>{{ venue_html }}</i>, {{ pub.year }}.
