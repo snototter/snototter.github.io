@@ -1,0 +1,36 @@
+{% assign download_url = nil %}
+{% assign download_icon = nil %}
+{% if entry.github_url %}
+  {% assign download_url = entry.github_url %}
+  {% assign download_icon = "fab fa-github" %}
+{% else %}
+  {% if entry.download_url %}
+    {% assign download_url = entry.download_url %}
+    {% assign download_icon = "fas fa-download" %}
+  {% endif %}  
+{% endif %}
+
+<tr class="dlentry">
+  <td class="dlurl">
+    {% if download_url %}
+      <a href="{{ download_url }}" target="_blank"><i class="{{ download_icon }}"></i></a>
+    {% endif %}
+  </td>
+  <td class="dlinfo">
+    <p><b>{{ entry.title }}</b></p>
+    <p>{{ entry.description }}</p>
+  </td>
+  <td class="dllang">
+    <table>
+      <tr>
+    {% for icon in entry.icons %}
+        {% if download_url %}
+          <td><a href="{{ download_url }}" target="_blank"><img class="dllang-icon" src="/images/icons/icon-{{ icon }}-bw.webp" alt="{{ icon }}"/></a></td>
+        {% else %}
+          <td><img class="dllang-icon" src="/images/icons/icon-{{ icon }}-bw.webp" alt="{{ icon }}"/></td>
+        {% endif %}
+    {% endfor %}
+      </tr>
+    </table>
+  </td>
+  </tr>

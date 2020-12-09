@@ -8,9 +8,9 @@ redirect_from:
   - /tinkering
 ---
 
-Still to be filled with additional content!
+Still rather incomplete!
 
-
+{% comment %}
 <h2 id="vito" class="cd-header">[Python] vito<a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
 <div class="cd-detail">
 <p>
@@ -24,28 +24,19 @@ Still to be filled with additional content!
 A light-weight Python utility package for common computer vision &amp; image manipulation tasks.
 </p>
 </div>
+{% endcomment %}
 
 
-<ul>
-{% for dl in site.downloads %}
-<li>dl.title
-{%for ic in dl.icons %}
-({{ic}})
-{% endfor %}
-</li>
-{% endfor %}
-</ul>
-
-<h2 id="iminspect" class="cd-header">[Python] iminspect<a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
-<div class="cd-detail">
-TODO
-</div>
+<h2 id="software" class="dlheader">Software <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<table class="dltable">
+  <tbody>
+    {% for entry in site.downloads %}
+      {% include downloadentry.html %}
+    {% endfor %}
+  </tbody>
+</table>
 
 
-<h2 id="basictinkering" class="cd-header">[Arduino] BasicTinkering<a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
-<div class="cd-detail">
-TODO
-</div>
 {% comment %}
 
 # Software

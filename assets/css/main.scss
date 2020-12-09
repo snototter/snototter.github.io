@@ -75,7 +75,7 @@ h1.page__title {
   margin-top: 1em;
 }
 
-h2.pubheader {
+h2.pubheader, h2.dlheader {
   font-size: 1.5em;
   font-weight: 600;
   border-bottom: none;
@@ -152,6 +152,60 @@ table.pubtable td.pubteaser {
 
 table.putable td.pubinfo {
   padding: 1em 0.5em 1em 0.5em;
+}
+
+
+table.dltable {
+  /*margin-left: 1em;
+  margin-right: 1em;*/
+  font-size: 0.8em;
+  width: 100%;
+  border-collapse: collapse;
+  border: none;
+  
+  td {
+    text-align: left;
+    padding: 0.5em 0.5em;
+    border: none;
+  }
+
+  th {
+    text-align:left;
+    border-bottom:1px solid #afafaf;
+    background: #ffffff;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
+  tr.dlentry:nth-child(odd) {
+  background: #efefef;
+  }
+}
+.dlentry {
+  p {
+    margin: 0 0 1em 0.3em;
+  }
+}
+table.dltable td.dlinfo {
+  padding: 1em 0.5em 0em 0.5em;
+}
+table.dltable td.dlurl i {
+  font-size: 4em;
+  color: black;
+}
+
+td.dllang table {
+  border: none;
+
+  td {
+    vertical-align: middle;
+    text-align: right;
+    padding: 0.75em;
+  }
+}
+img.dllang-icon {
+  max-width: inherit;
+  width: 4em;
 }
 
 //TODO popup works - but simply displaying a tr below would be much simpler and likely more portable...
