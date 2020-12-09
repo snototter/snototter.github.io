@@ -8,7 +8,7 @@ pdf_url: https://openaccess.thecvf.com/content_cvpr_2014/papers/Possegger_Occlus
 doi_url: https://doi.org/10.1109/CVPR.2014.170
 slide_url: /files/presentations/possegger-cvpr14-poster.pdf
 video_url: https://vimeo.com/88141421
-code_url: https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/occgeo/
+code_url: https://drive.google.com/file/d/15PwYwZmccQRCEB4JSM_5V4V-RZpjAI66/view?usp=sharing
 external_url: http://www.pamitc.org/cvpr14/
 teaser_img: /images/teaser/occgeo.webp
 ---

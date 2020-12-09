@@ -138,6 +138,7 @@ collections:
   - pubs
   - pubs_workshops
   - theses
+  - downloads
   #publications:
   #  output: false
   #  permalink: /:collection/:path/

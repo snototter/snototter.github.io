@@ -8,6 +8,7 @@ pdf_url: https://www.votchallenge.net/vot2014/download/vot_2014_paper.pdf
 publisher_url: https://www.votchallenge.net/vot2014/download/vot_2014_paper.pdf
 slide_url: https://www.votchallenge.net/vot2014/download/vot_2014_presentation.pdf
 data_url: http://data.votchallenge.net/vot2014/vot2014_results.zip
+code_url: https://drive.google.com/file/d/1nSuQMRn2MdZstmUY9S8YbNdc8FqWiL2O/view?usp=sharing
 external_url: https://www.votchallenge.net/vot2014/
 teaser_img: /images/teaser/vot2014_logo.png
 ---
