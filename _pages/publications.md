@@ -5,6 +5,8 @@ redirect_from:
   - /papers
 author_profile: true
 ---
+{% include base_path %}
+{% assign author = site.author %}
 
 Here you'll find a list of my publications, including [conference & journal papers](#cjproc), contributions to [tracking challenges](#chg), and [my theses](#theses).
 
@@ -26,10 +28,8 @@ Here you'll find a list of my publications, including [conference & journal pape
     <td class="isicon"><i class="fa fa-globe-americas withpuburl"></i></td><td class="istxt">External URL</td>
   </tr>
 </table>
-{% include base_path %}
-{% assign author = site.author %}
 
-<h2 id="cjproc" class="pubheader">Conferences &amp; Journals <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<h2 id="cjproc" class="pubheader">Conferences &amp; Journals{% include scroll_top %}</h2>
 <table class="pubtable">
   <tbody>
     {% for pub in site.pubs reversed %}
@@ -38,7 +38,7 @@ Here you'll find a list of my publications, including [conference & journal pape
   </tbody>
 </table>
 
-<h2 id="chg" class="pubheader">Visual Object Tracking Challenges <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<h2 id="chg" class="pubheader">Visual Object Tracking Challenges{% include scroll_top %}</h2>
 <table class="pubtable">
   <tbody>
     {% for pub in site.pubs_workshops reversed %}
@@ -48,7 +48,7 @@ Here you'll find a list of my publications, including [conference & journal pape
 </table>
 
 
-<h2 id="theses" class="pubheader">Theses <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<h2 id="theses" class="pubheader">Theses{% include scroll_top %}</h2>
 <table class="pubtable">
   <tbody>
     {% for pub in site.theses reversed %}

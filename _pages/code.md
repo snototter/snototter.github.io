@@ -15,7 +15,7 @@ Here you'll find downloads for various [software libraries/utilities](#software)
 {% assign data_list = dlist | where: "type", "dataset" %}
 
 {% if sw_list.size > 0 %}
-<h2 id="software" class="dlheader">Software <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<h2 id="software" class="dlheader">Software{% include scroll_top %}</h2>
 <table class="dltable">
   <tbody>
     {% for entry in sw_list %}
@@ -25,7 +25,7 @@ Here you'll find downloads for various [software libraries/utilities](#software)
 </table>
 {% endif %}
 {% if data_list.size > 0 %}
-<h2 id="datasets" class="dlheader">Datasets <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<h2 id="datasets" class="dlheader">Datasets{% include scroll_top %}</h2>
 <table class="dltable">
   <tbody>
     {% for entry in data_list %}
