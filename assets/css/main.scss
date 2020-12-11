@@ -217,6 +217,31 @@ img.dllang-icon {
   width: 3em;
 }
 
+table.iconsummary {
+  font-size: 0.8em;
+  width: fit-content;
+  border-collapse: collapse;
+  border: none;
+  
+  td.isicon {
+    text-align: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+  }
+  td.istxt {
+    text-align: left;
+    padding-left: 0em;
+    padding-right: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border: none;
+  }
+}
+
+
 //TODO popup works - but simply displaying a tr below would be much simpler and likely more portable...
 /**
 p:nth-child(4n+1), p:nth-child(4n+2) {

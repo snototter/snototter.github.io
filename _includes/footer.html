@@ -22,4 +22,4 @@
   </ul>
 </div>
 -->
-<div class="page__footer-copyright">&copy; 2019&ndash;{{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].based_on | default: "Based on" }} <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>.</div>
+<div class="page__footer-copyright">&copy; 2019&ndash;{{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].based_on | default: "Based on" }} {% if page.url contains '/publications' %}<a href="https://rspreitzer.github.io/">rspreitzer</a>, {% endif %}<a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>.</div>
