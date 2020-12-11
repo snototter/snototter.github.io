@@ -13,7 +13,12 @@
 <tr class="dlentry">
   <td class="dlurl">
     {% if download_url %}
-      <a href="{{ download_url }}" target="_blank"><i class="{{ download_icon }}"></i></a>
+      <a href="{{ download_url }}" target="_blank"><i class="{{ download_icon }}"></i>
+      {% if entry.badge %}
+      <br/>
+      <img src="{{ entry.badge }}" />
+      {% endif %}
+      </a>
     {% endif %}
   </td>
   <td class="dlinfo">

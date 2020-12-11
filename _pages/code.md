@@ -10,38 +10,28 @@ redirect_from:
 
 Still rather incomplete!
 
-{% comment %}
-<h2 id="vito" class="cd-header">[Python] vito<a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
-<div class="cd-detail">
-<p>
-<a href="https://pypi.org/project/vito"><img src="https://badge.fury.io/py/vito.svg" alt="View on PyPI"/></a>
-<a href="https://pypi.org/project/vito"><img src="https://img.shields.io/pypi/dm/vito.svg" alt="PyPI - Downloads"/></a>
-<a href="https://travis-ci.com/snototter/vito"><img src="https://travis-ci.com/snototter/vito.svg?branch=master" alt="Build Status"/></a>
-<a href="https://coveralls.io/github/snototter/vito?branch=master"><img src="https://coveralls.io/repos/github/snototter/vito/badge.svg?branch=master" alt="Coverage Status"/></a>
-<a href="https://github.com/snototter/vito/blob/master/LICENSE?raw=true"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"/></a>
-</p>
-<p>
-A light-weight Python utility package for common computer vision &amp; image manipulation tasks.
-</p>
-</div>
-{% endcomment %}
+{% assign dlist = site.downloads | where: "show", "true" %}
+{% assign sw_list = dlist | where: "type", "software" %}
+{% assign data_list = dlist | where: "type", "dataset" %}
 
 
+{% if sw_list.size > 0 %}
 <h2 id="software" class="dlheader">Software <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
 <table class="dltable">
   <tbody>
-    {% for entry in site.downloads %}
+    {% for entry in sw_list %}
       {% include downloadentry.html %}
     {% endfor %}
   </tbody>
 </table>
-
-
-{% comment %}
-
-# Software
-## vitocpp
-# Data
-## ICG Lab6
-## vPTZ
-{% endcomment %}
+{% endif %}
+{% if data_list.size > 0 %}
+<h2 id="datasets" class="dlheader">Datasets <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<table class="dltable">
+  <tbody>
+    {% for entry in data_list %}
+      {% include downloadentry.html %}
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
