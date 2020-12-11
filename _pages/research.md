@@ -36,16 +36,16 @@ add project overview
 <h2>Professional Services <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
 <!-- Been there, done that -->
 Reviewing for conferences (since 2015), including:
-* [IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)](https://en.wikipedia.org/wiki/Conference_on_Computer_Vision_and_Pattern_Recognition)
-* [European Conference on Computer Vision (ECCV)](https://en.wikipedia.org/wiki/European_Conference_on_Computer_Vision)
-* [International Conference on Computer Vision (ICCV)](https://en.wikipedia.org/wiki/International_Conference_on_Computer_Vision)
-* [IEEE Winter Conference on Applications of Computer Vision (WACV)](https://dblp.org/db/conf/wacv/index.html)
+* [IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)](https://ieeexplore.ieee.org/xpl/conhome/1001809/all-proceedings)
+* [European Conference on Computer Vision (ECCV)](https://link.springer.com/conference/eccv)
+* [International Conference on Computer Vision (ICCV)](https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings)
+* [IEEE Winter Conference on Applications of Computer Vision (WACV)](https://ieeexplore.ieee.org/xpl/conhome/1000040/all-proceedings)
 * [Visual Object Tracking challenge (VOT) Workshop](https://www.votchallenge.net/)
-* [IEEE International Conference on Robotics and Automation (ICRA)](https://en.wikipedia.org/wiki/International_Conference_on_Robotics_and_Automation)
-* International Symposium on Image and Signal Processing and Analysis (ISPA)
+* [IEEE International Conference on Robotics and Automation (ICRA)](https://ieeexplore.ieee.org/xpl/conhome/1000639/all-proceedings)
+* [International Symposium on Image and Signal Processing and Analysis (ISPA)](https://ieeexplore.ieee.org/xpl/conhome/1000347/all-proceedings)
 * [Computer Vision Winter Workshop (CVWW)](https://cvww2020.vicos.si/about/)
 * [Workshop of the Austrian Association for Pattern Recognition (OAGM/AAPR)](https://aapr.at/?page_id=43)
-* [ACM SIGGRAPH Asia](https://en.wikipedia.org/wiki/SIGGRAPH)
+* [ACM SIGGRAPH Asia](https://dblp.org/db/conf/siggrapha/index.html)
 
 Reviewing for journals (since 2014), including:
 * [IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34)
@@ -63,3 +63,4 @@ Reviewing for journals (since 2014), including:
 * [International Journal of Distributed Sensor Networks (IJDSN)](https://journals.sagepub.com/home/dsn)
 * [Computational Intelligence and Neuroscience (CIN)](https://www.hindawi.com/journals/cin)
 * [IET Computer Vision](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=4159597)
+
