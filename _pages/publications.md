@@ -4,7 +4,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-Here you'll find a (mostly) up-to-date list of my publications, including [conference & journal papers](#cjproc), contributions to [workshops & challenges](#chg), and [my theses](#theses).
+Here you'll find a list of my publications, including [conference & journal papers](#cjproc), contributions to [tracking challenges](#chg), and [my theses](#theses).
 
 {% include base_path %}
 {% assign author = site.author %}
@@ -18,7 +18,7 @@ Here you'll find a (mostly) up-to-date list of my publications, including [confe
   </tbody>
 </table>
 
-<h2 id="chg" class="pubheader">Workshops &amp; Challenges <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
+<h2 id="chg" class="pubheader">Tracking Challenges <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
 <table class="pubtable">
   <tbody>
     {% for pub in site.pubs_workshops reversed %}

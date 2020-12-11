@@ -8,12 +8,11 @@ redirect_from:
   - /tinkering
 ---
 
-Still rather incomplete!
+Here you'll find downloads for various [software libraries/utilities](#software) and [custom datasets](#datasets).
 
 {% assign dlist = site.downloads | where: "show", "true" %}
 {% assign sw_list = dlist | where: "type", "software" %}
 {% assign data_list = dlist | where: "type", "dataset" %}
-
 
 {% if sw_list.size > 0 %}
 <h2 id="software" class="dlheader">Software <a href="#main"><i class="totopnav fas fa-arrow-up"></i></a></h2>
