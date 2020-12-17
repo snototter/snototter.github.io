@@ -8,7 +8,7 @@ redirect_from:
   - /tinkering
 ---
 
-Here you'll find downloads for various [software libraries/utilities](#software) and [custom datasets](#datasets). For publication-related downloads, please refer to my [publication list](/publications) 
+Here you'll find downloads for various [software libraries/utilities](#software) and [custom datasets](#datasets). Publication-related downloads may be more easily accessed from my [publication list](/publications).
 
 {% assign dlist = site.downloads | where: "show", "true" %}
 {% assign sw_list = dlist | where: "type", "software" %}
