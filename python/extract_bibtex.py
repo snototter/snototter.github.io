@@ -19,7 +19,7 @@ def parse_args():
 
 
 def html_escape(text):
-    """Produce entities within text."""
+    """Replace latex special characters with html entities."""
     # Check latex special characters: https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes
     # HTML entitites: https://dev.w3.org/html5/html-author/charref
     escape_entities = [
@@ -109,21 +109,15 @@ def html_escape(text):
         ('ß', '&szlig;'),
         # Quotation marks and apostrophes
         ("'", "&apos;"), ('"', '&quot;'),
-        # Finally, strip parentheses and unused commands
+        # Strip parentheses and unused commands
         ('\\emph', ''), ('\\textbf', ''),
         ('et al.', '<i>et al.</i>'),
         ('{', ''), ('}', ''),
         ('--', '&ndash;')
-    ]   
+    ]
     for search, repl in escape_entities:
         text = text.replace(search, repl)
     return text
-    # html_escape_table = {
-    #     "&": "&amp;",
-    #     '"': "&quot;",
-    #     "'": "&apos;"
-    #     }
-    # return "".join(html_escape_table.get(c,c) for c in text)
 
 
 def author_name(p):
@@ -136,6 +130,7 @@ def author_name(p):
 
 
 def extract_authors(persons, max_num):
+    """Return a string representation of the author list."""
     names = [author_name(p) for p in persons]
     if max_num is None or len(names) <= max_num:
         return ', '.join(names)
@@ -144,6 +139,7 @@ def extract_authors(persons, max_num):
     
 
 def dump_markdown(output_folder, entry):
+    """Save the parsed bibtex entry to the jekyll collection folder."""
     # print(entry.__dict__)
     # print(entry.type)
     year = int(entry.fields['year'])
@@ -159,16 +155,6 @@ def dump_markdown(output_folder, entry):
     authors = html_escape(extract_authors(entry.persons['author'], max_author_display))
 
     md = f'---\ntitle: "{title}"\n'
-    # md += f'collection: theses\n'
-
-            #md += """\npermalink: """ + publist[pubsource]["collection"]["permalink"]  + html_filename
-            
-            # note = False
-            # if "note" in b.keys():
-            #     if len(str(b["note"])) > 5:
-            #         md += "\nexcerpt: '" + html_escape(b["note"]) + "'"
-            #         note = True
-
     md += f'year: {year}\n'
     md += f'authors: "{authors}"\n'
     venue_extra = None
@@ -241,13 +227,13 @@ def dump_markdown(output_folder, entry):
         md += f'teaser_img: {entry.fields["teaser_img"]}\n'
     md += '---\n'
 
-
     with open(filename, 'w') as f:
         f.write(md)
         print(f'* Saved {filename}')
 
 
 def pub_rank(entry):
+    """Return a subjective ranking to change the display order on the website."""
     if 'venue_abbreviation' in entry.fields:
         venues = {
             'TPAMI': 90,
