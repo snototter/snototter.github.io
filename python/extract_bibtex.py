@@ -257,6 +257,7 @@ def pub_rank(entry):
             'ACCV' : 60,
             'WACV' : 60,
             'AVSS' : 50,
+            'TMM'  : 40,
             'CVWW' : 10,
             'ITSC' : 10
         }
