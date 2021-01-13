@@ -6,6 +6,7 @@ Parse my bibtex file and create jekyll-friendly collection entries.
 import argparse
 import os
 import sys
+from functools import cmp_to_key
 from pybtex.database.input import bibtex
 
 def parse_args():
@@ -147,7 +148,8 @@ def dump_markdown(output_folder, entry):
     # print(entry.type)
     year = int(entry.fields['year'])
     key = entry.key
-    filename = os.path.join(output_folder, f'{year}-{key}.md')
+    rank = pub_rank(entry)
+    filename = os.path.join(output_folder, f'{year}-{rank:02d}-{key}.md')
     title = html_escape(entry.fields["title"].replace("{", "").replace("}","").replace("\\",""))
 
     if 'max_author_display' in entry.fields:
@@ -245,13 +247,54 @@ def dump_markdown(output_folder, entry):
         print(f'* Saved {filename}')
 
 
+def pub_rank(entry):
+    if 'venue_abbreviation' in entry.fields:
+        venues = {
+            'TPAMI': 90,
+            'CVPR' : 80,
+            'ICCV' : 80,
+            'ECCV' : 80,
+            'ACCV' : 60,
+            'WACV' : 60,
+            'AVSS' : 50,
+            'CVWW' : 10,
+            'ITSC' : 10
+        }
+        v = entry.fields['venue_abbreviation']
+        if v in venues:
+            return venues[v]
+    return 0
+
+
+def compare_bibentries(e1, e2):
+    """Sort bibtex entries by year and importance of venue"""
+    y1 = e1.fields['year']
+    y2 = e2.fields['year']
+    if y1 < y2:
+        return -1
+    elif y2 > y1:
+        return +1
+    else:
+        r1 = pub_rank(e1)
+        r2 = pub_rank(e2)
+        if r1 < r2:
+            return -1
+        elif r2 > r1:
+            return +1
+        else:
+            return 0
+
+
 def parse_bibtex():
     args = parse_args()
     bibtex_data = bibtex.Parser().parse_file(args.bibtex_file)
     print(f'Dropping {len(bibtex_data.entries)} items to {args.output_folder}')
-    #print([bibtex_data.entries[e] for e in bibtex_data.entries])
-    #sorted_keys = sorted([e for e in bibtex_data.entries], key=lambda e: bibtex_data.entries[e].fields['year'], reverse=True)
-    #print(sorted_keys)
+    # entries = [bibtex_data.entries[e] for e in bibtex_data.entries]
+    # sorted_entries = sorted(entries, key=cmp_to_key(compare_bibentries))
+    # print(sorted_entries)
+    # # sorted_keys = sorted([e for e in bibtex_data.entries], key=lambda e: bibtex_data.entries[e].fields['year'], reverse=True)
+    # # print(sorted_keys)
+
     if not os.path.exists(args.output_folder):
         os.makedirs(args.output_folder)
     #for k in sorted_keys:
