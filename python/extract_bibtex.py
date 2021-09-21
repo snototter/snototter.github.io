@@ -32,120 +32,127 @@ def bib_escape(text):
     return text
 
 
+# Check latex special characters: https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes
+# HTML entitites: https://dev.w3.org/html5/html-author/charref
+html_escape_entities = [
+    ('&', '&amp;'),
+    # Tilde
+    ('\\~{a}', '&atilde;'), ('{\\~a}', '&atilde;'),
+    ('\\~{A}', '&Atilde;'), ('{\\~A}', '&Atilde;'),
+    ('\\~{n}', '&ntilde;'), ('{\\~n}', '&ntilde;'),
+    ('\\~{N}', '&Ntilde;'), ('{\\~N}', '&Ntilde;'),
+    ('\\~{o}', '&otilde;'), ('{\\~o}', '&otilde;'),
+    ('\\~{O}', '&Otilde;'), ('{\\~O}', '&Otilde;'),
+    ('\\~{i}', '&itilde;'), ('{\\~i}', '&itilde;'),
+    ('\\~{I}', '&Itilde;'), ('{\\~I}', '&Itilde;'),
+    ('\\~{u}', '&utilde;'), ('{\\~u}', '&utilde;'),
+    ('\\~{U}', '&Utilde;'), ('{\\~U}', '&Utilde;'),
+    # Carons
+    ('\\v{c}', '&ccaron;'), ('{\\v c}', '&ccaron;'),
+    ('\\v{C}', '&Ccaron;'), ('{\\v C}', '&Ccaron;'),
+    ('\\v{d}', '&dcaron;'), ('{\\v d}', '&dcaron;'),
+    ('\\v{D}', '&Dcaron;'), ('{\\v D}', '&Dcaron;'),
+    ('\\v{e}', '&ecaron;'), ('{\\v e}', '&ecaron;'),
+    ('\\v{E}', '&Ecaron;'), ('{\\v E}', '&Ecaron;'),
+    ('\\v{l}', '&lcaron;'), ('{\\v l}', '&lcaron;'),
+    ('\\v{L}', '&Lcaron;'), ('{\\v L}', '&Lcaron;'),
+    ('\\v{n}', '&ncaron;'), ('{\\v n}', '&ncaron;'),
+    ('\\v{N}', '&Ncaron;'), ('{\\v N}', '&Ncaron;'),
+    ('\\v{r}', '&rcaron;'), ('{\\v r}', '&rcaron;'),
+    ('\\v{R}', '&Rcaron;'), ('{\\v R}', '&Rcaron;'),
+    ('\\v{s}', '&scaron;'), ('{\\v s}', '&scaron;'),
+    ('\\v{S}', '&Scaron;'), ('{\\v S}', '&Scaron;'),
+    ('\\v{t}', '&tcaron;'), ('{\\v t}', '&tcaron;'),
+    ('\\v{T}', '&Tcaron;'), ('{\\v T}', '&Tcaron;'),
+    ('\\v{z}', '&zcaron;'), ('{\\v z}', '&zcaron;'),
+    ('\\v{Z}', '&Zcaron;'), ('{\\v Z}', '&Zcaron;'),
+    # Acute accents
+    ("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
+    ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
+    ("\\'{e}", '&eacute;'), ("{\\' e}", '&eacute;'), ("{\\'e}", '&eacute;'),
+    ("\\'{E}", '&Eacute;'), ("{\\' E}", '&Eacute;'), ("{\\'E}", '&Eacute;'),
+    ("\\'{i}", '&iacute;'), ("{\\' i}", '&iacute;'), ("{\\'i}", '&iacute;'),
+    ("\\'{I}", '&Iacute;'), ("{\\' I}", '&Iacute;'), ("{\\'I}", '&Iacute;'),
+    ("\\'{o}", '&oacute;'), ("{\\' o}", '&oacute;'), ("{\\'o}", '&oacute;'),
+    ("\\'{O}", '&Oacute;'), ("{\\' O}", '&Oacute;'), ("{\\'O}", '&Oacute;'),
+    ("\\'{u}", '&uacute;'), ("{\\' u}", '&uacute;'), ("{\\'u}", '&uacute;'),
+    ("\\'{U}", '&Uacute;'), ("{\\' U}", '&Uacute;'), ("{\\'U}", '&Uacute;'),
+    ("\\'{c}", '&cacute;'), ("{\\' c}", '&cacute;'), ("{\\'c}", '&cacute;'),
+    ("\\'{C}", '&Cacute;'), ("{\\' C}", '&Cacute;'), ("{\\'C}", '&Cacute;'),
+    ("\\'{l}", '&lacute;'), ("{\\' l}", '&lacute;'), ("{\\'l}", '&lacute;'),
+    ("\\'{L}", '&Lacute;'), ("{\\' L}", '&Lacute;'), ("{\\'L}", '&Lacute;'),
+    # N("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
+    # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
+    # R("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
+    # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
+    # S("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
+    # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
+    # Cedilla
+    ('\\c{c}', '&ccedil;'), ('\\c{C}', '&Ccedil;'),
+    ('\\c{g}', '&gcedil;'), ('\\c{G}', '&Gcedil;'),
+    ('\\c{k}', '&kcedil;'), ('\\c{K}', '&Kcedil;'),
+    ('\\c{l}', '&lcedil;'), ('\\c{L}', '&Lcedil;'),
+    ('\\c{n}', '&ncedil;'), ('\\c{N}', '&Ncedil;'),
+    ('\\c{r}', '&rcedil;'), ('\\c{R}', '&Rcedil;'),
+    ('\\c{s}', '&scedil;'), ('\\c{S}', '&Scedil;'),
+    ('\\c{t}', '&tcedil;'), ('\\c{T}', '&Tcedil;'),
+    # Breve
+    ('\\u{a}', '&abreve;'), ('\\u{A}', '&Abreve;'),
+    ('\\u{g}', '&gbreve;'), ('\\u{G}', '&Gbreve;'),
+    ('\\u{u}', '&ubreve;'), ('\\u{U}', '&Ubreve;'),
+    # Grave accents
+    ('\\`{a}', '&agrave;'), ('{\\` a}', '&agrave;'), ('{\\`a}', '&agrave;'),
+    ('\\`{A}', '&Agrave;'), ('{\\` A}', '&Agrave;'), ('{\\`A}', '&Agrave;'),
+    ('\\`{e}', '&egrave;'), ('{\\` e}', '&egrave;'), ('{\\`e}', '&egrave;'),
+    ('\\`{E}', '&Egrave;'), ('{\\` E}', '&Egrave;'), ('{\\`E}', '&Egrave;'),
+    ('\\`{i}', '&igrave;'), ('{\\` i}', '&igrave;'), ('{\\`i}', '&igrave;'),
+    ('\\`{I}', '&Igrave;'), ('{\\` I}', '&Igrave;'), ('{\\`I}', '&Igrave;'),
+    ('\\`{o}', '&ograve;'), ('{\\` o}', '&ograve;'), ('{\\`o}', '&ograve;'),
+    ('\\`{O}', '&Ograve;'), ('{\\` O}', '&Ograve;'), ('{\\`O}', '&Ograve;'),
+    ('\\`{u}', '&ugrave;'), ('{\\` u}', '&ugrave;'), ('{\\`u}', '&ugrave;'),
+    ('\\`{U}', '&Ugrave;'), ('{\\` U}', '&Ugrave;'), ('{\\`U}', '&Ugrave;'),
+    # German umlauts
+    ('\\"{a}', '&auml;'), ('{\\" a}', '&auml;'), ('{\\"a}', '&auml;'), ('ä', '&auml;'),
+    ('\\"{A}', '&Auml;'), ('{\\" A}', '&Auml;'), ('{\\"A}', '&Auml;'), ('Ä', '&Auml;'),
+    ('\\"{o}', '&ouml;'), ('{\\" o}', '&ouml;'), ('{\\"o}', '&ouml;'), ('ö', '&ouml;'),
+    ('\\"{O}', '&Ouml;'), ('{\\" O}', '&Ouml;'), ('{\\"O}', '&Ouml;'), ('Ö', '&Ouml;'),
+    ('\\"{u}', '&uuml;'), ('{\\" u}', '&uuml;'), ('{\\"u}', '&uuml;'), ('ü', '&uuml;'),
+    ('\\"{U}', '&Uuml;'), ('{\\" U}', '&Uuml;'), ('{\\"U}', '&Uuml;'), ('Ü', '&Uuml;'),
+    ('ß', '&szlig;'),
+    # Quotation marks and apostrophes
+    ("'", "&apos;"), ('"', '&quot;'),
+    # Strip parentheses and unused commands
+    ('\\emph', ''), ('\\textbf', ''),
+    ('et al.', '<i>et al.</i>'),
+    ('{', ''), ('}', ''),
+    ('--', '&ndash;')
+]
+
 def html_escape(text):
     """Replace latex special characters with html entities."""
-    # Check latex special characters: https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes
-    # HTML entitites: https://dev.w3.org/html5/html-author/charref
-    escape_entities = [
-        ('&', '&amp;'),
-        # Tilde
-        ('\\~{a}', '&atilde;'), ('{\\~a}', '&atilde;'),
-        ('\\~{A}', '&Atilde;'), ('{\\~A}', '&Atilde;'),
-        ('\\~{n}', '&ntilde;'), ('{\\~n}', '&ntilde;'),
-        ('\\~{N}', '&Ntilde;'), ('{\\~N}', '&Ntilde;'),
-        ('\\~{o}', '&otilde;'), ('{\\~o}', '&otilde;'),
-        ('\\~{O}', '&Otilde;'), ('{\\~O}', '&Otilde;'),
-        ('\\~{i}', '&itilde;'), ('{\\~i}', '&itilde;'),
-        ('\\~{I}', '&Itilde;'), ('{\\~I}', '&Itilde;'),
-        ('\\~{u}', '&utilde;'), ('{\\~u}', '&utilde;'),
-        ('\\~{U}', '&Utilde;'), ('{\\~U}', '&Utilde;'),
-        # Carons
-        ('\\v{c}', '&ccaron;'), ('{\\v c}', '&ccaron;'),
-        ('\\v{C}', '&Ccaron;'), ('{\\v C}', '&Ccaron;'),
-        ('\\v{d}', '&dcaron;'), ('{\\v d}', '&dcaron;'),
-        ('\\v{D}', '&Dcaron;'), ('{\\v D}', '&Dcaron;'),
-        ('\\v{e}', '&ecaron;'), ('{\\v e}', '&ecaron;'),
-        ('\\v{E}', '&Ecaron;'), ('{\\v E}', '&Ecaron;'),
-        ('\\v{l}', '&lcaron;'), ('{\\v l}', '&lcaron;'),
-        ('\\v{L}', '&Lcaron;'), ('{\\v L}', '&Lcaron;'),
-        ('\\v{n}', '&ncaron;'), ('{\\v n}', '&ncaron;'),
-        ('\\v{N}', '&Ncaron;'), ('{\\v N}', '&Ncaron;'),
-        ('\\v{r}', '&rcaron;'), ('{\\v r}', '&rcaron;'),
-        ('\\v{R}', '&Rcaron;'), ('{\\v R}', '&Rcaron;'),
-        ('\\v{s}', '&scaron;'), ('{\\v s}', '&scaron;'),
-        ('\\v{S}', '&Scaron;'), ('{\\v S}', '&Scaron;'),
-        ('\\v{t}', '&tcaron;'), ('{\\v t}', '&tcaron;'),
-        ('\\v{T}', '&Tcaron;'), ('{\\v T}', '&Tcaron;'),
-        ('\\v{z}', '&zcaron;'), ('{\\v z}', '&zcaron;'),
-        ('\\v{Z}', '&Zcaron;'), ('{\\v Z}', '&Zcaron;'),
-        # Acute accents
-        ("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
-        ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
-        ("\\'{e}", '&eacute;'), ("{\\' e}", '&eacute;'), ("{\\'e}", '&eacute;'),
-        ("\\'{E}", '&Eacute;'), ("{\\' E}", '&Eacute;'), ("{\\'E}", '&Eacute;'),
-        ("\\'{i}", '&iacute;'), ("{\\' i}", '&iacute;'), ("{\\'i}", '&iacute;'),
-        ("\\'{I}", '&Iacute;'), ("{\\' I}", '&Iacute;'), ("{\\'I}", '&Iacute;'),
-        ("\\'{o}", '&oacute;'), ("{\\' o}", '&oacute;'), ("{\\'o}", '&oacute;'),
-        ("\\'{O}", '&Oacute;'), ("{\\' O}", '&Oacute;'), ("{\\'O}", '&Oacute;'),
-        ("\\'{u}", '&uacute;'), ("{\\' u}", '&uacute;'), ("{\\'u}", '&uacute;'),
-        ("\\'{U}", '&Uacute;'), ("{\\' U}", '&Uacute;'), ("{\\'U}", '&Uacute;'),
-        ("\\'{c}", '&cacute;'), ("{\\' c}", '&cacute;'), ("{\\'c}", '&cacute;'),
-        ("\\'{C}", '&Cacute;'), ("{\\' C}", '&Cacute;'), ("{\\'C}", '&Cacute;'),
-        ("\\'{l}", '&lacute;'), ("{\\' l}", '&lacute;'), ("{\\'l}", '&lacute;'),
-        ("\\'{L}", '&Lacute;'), ("{\\' L}", '&Lacute;'), ("{\\'L}", '&Lacute;'),
-        # N("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
-        # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
-        # R("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
-        # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
-        # S("\\'{a}", '&aacute;'), ("{\\' a}", '&aacute;'), ("{\\'a}", '&aacute;'),
-        # ("\\'{A}", '&Aacute;'), ("{\\' A}", '&Aacute;'), ("{\\'A}", '&Aacute;'),
-        # Cedilla
-        ('\\c{c}', '&ccedil;'), ('\\c{C}', '&Ccedil;'),
-        ('\\c{g}', '&gcedil;'), ('\\c{G}', '&Gcedil;'),
-        ('\\c{k}', '&kcedil;'), ('\\c{K}', '&Kcedil;'),
-        ('\\c{l}', '&lcedil;'), ('\\c{L}', '&Lcedil;'),
-        ('\\c{n}', '&ncedil;'), ('\\c{N}', '&Ncedil;'),
-        ('\\c{r}', '&rcedil;'), ('\\c{R}', '&Rcedil;'),
-        ('\\c{s}', '&scedil;'), ('\\c{S}', '&Scedil;'),
-        ('\\c{t}', '&tcedil;'), ('\\c{T}', '&Tcedil;'),
-        # Breve
-        ('\\u{a}', '&abreve;'), ('\\u{A}', '&Abreve;'),
-        ('\\u{g}', '&gbreve;'), ('\\u{G}', '&Gbreve;'),
-        ('\\u{u}', '&ubreve;'), ('\\u{U}', '&Ubreve;'),
-        # Grave accents
-        ('\\`{a}', '&agrave;'), ('{\\` a}', '&agrave;'), ('{\\`a}', '&agrave;'),
-        ('\\`{A}', '&Agrave;'), ('{\\` A}', '&Agrave;'), ('{\\`A}', '&Agrave;'),
-        ('\\`{e}', '&egrave;'), ('{\\` e}', '&egrave;'), ('{\\`e}', '&egrave;'),
-        ('\\`{E}', '&Egrave;'), ('{\\` E}', '&Egrave;'), ('{\\`E}', '&Egrave;'),
-        ('\\`{i}', '&igrave;'), ('{\\` i}', '&igrave;'), ('{\\`i}', '&igrave;'),
-        ('\\`{I}', '&Igrave;'), ('{\\` I}', '&Igrave;'), ('{\\`I}', '&Igrave;'),
-        ('\\`{o}', '&ograve;'), ('{\\` o}', '&ograve;'), ('{\\`o}', '&ograve;'),
-        ('\\`{O}', '&Ograve;'), ('{\\` O}', '&Ograve;'), ('{\\`O}', '&Ograve;'),
-        ('\\`{u}', '&ugrave;'), ('{\\` u}', '&ugrave;'), ('{\\`u}', '&ugrave;'),
-        ('\\`{U}', '&Ugrave;'), ('{\\` U}', '&Ugrave;'), ('{\\`U}', '&Ugrave;'),
-        # German umlauts
-        ('\\"{a}', '&auml;'), ('{\\" a}', '&auml;'), ('{\\"a}', '&auml;'), ('ä', '&auml;'),
-        ('\\"{A}', '&Auml;'), ('{\\" A}', '&Auml;'), ('{\\"A}', '&Auml;'), ('Ä', '&Auml;'),
-        ('\\"{o}', '&ouml;'), ('{\\" o}', '&ouml;'), ('{\\"o}', '&ouml;'), ('ö', '&ouml;'),
-        ('\\"{O}', '&Ouml;'), ('{\\" O}', '&Ouml;'), ('{\\"O}', '&Ouml;'), ('Ö', '&Ouml;'),
-        ('\\"{u}', '&uuml;'), ('{\\" u}', '&uuml;'), ('{\\"u}', '&uuml;'), ('ü', '&uuml;'),
-        ('\\"{U}', '&Uuml;'), ('{\\" U}', '&Uuml;'), ('{\\"U}', '&Uuml;'), ('Ü', '&Uuml;'),
-        ('ß', '&szlig;'),
-        # Quotation marks and apostrophes
-        ("'", "&apos;"), ('"', '&quot;'),
-        # Strip parentheses and unused commands
-        ('\\emph', ''), ('\\textbf', ''),
-        ('et al.', '<i>et al.</i>'),
-        ('{', ''), ('}', ''),
-        ('--', '&ndash;')
-    ]
-    for search, repl in escape_entities:
+    for search, repl in html_escape_entities:
         text = text.replace(search, repl)
     return text
 
 
-def author_name(p):
+def author_name(p, abbreviate):
     """Output the pybtex.Person's name"""
     def abbrev_first_name(fn):
-        return fn[:1] + '.'
-
+        if abbreviate:
+            # Check if name starts with special character
+            for search, _ in html_escape_entities:
+                if fn.startswith(search):
+                    return search + '.'
+            return fn[:1] + '.'
+        else:
+            return fn
     tokens = [abbrev_first_name(fn) for fn in p.first_names] + p.middle_names + p.prelast_names + p.last_names
     return ' '.join(tokens)
 
 
-def extract_authors(persons, max_num, delimiter=', ', others='et al.'):
+def extract_authors(persons, max_num, delimiter=', ', others='et al.', abbreviate=True):
     """Return a string representation of the author list."""
-    names = [author_name(p) for p in persons]
+    names = [author_name(p, abbreviate) for p in persons]
     if max_num is None or len(names) <= max_num:
         return delimiter.join(names)
     else:
@@ -255,7 +262,7 @@ def dump_markdown(output_folder, entry):
     md += f'bib_id: {key}\n'
     bib_title = bib_escape(entry.fields["title"].replace("{", "").replace("}",""))
     bib_authors = bib_escape(extract_authors(entry.persons['author'], max_author_display,
-                             delimiter=' and ', others='others'))
+                             delimiter=' and ', others='others', abbreviate=False))
     # Cannot split this string across multiple lines (or jekyll will render additional, unwanted whitespace)
     md += f"""bib_entry: "@{entry.type}&#123;{key},{bib_newline}title = &#123;{bib_title}&#125;,{bib_newline}author = &#123;{bib_authors}&#125;,{bib_newline}{bib_venue}{bib_newline}year = &#123;{year}&#125;<br/>&#125;"\n"""
 

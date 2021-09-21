@@ -9,5 +9,5 @@ publisher_url: http://data.vicos.si/cvww20/CVWW20-proceedings.pdf
 external_url: https://cvww2020.vicos.si/
 teaser_img: /images/teaser/sdc.webp
 bib_id: reisinger20a
-bib_entry: "@inproceedings&#123;reisinger20a,<br/>&nbsp;&nbsp;title = &#123;Towards Data-driven Multi-target Tracking for Autonomous Driving&#125;,<br/>&nbsp;&nbsp;author = &#123;C. Fruhwirth-Reisinger and G. Krispel and H. Possegger and H. Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the Computer Vision Winter Workshop (CVWW)&#125;,<br/>&nbsp;&nbsp;year = &#123;2020&#125;<br/>&#125;"
+bib_entry: "@inproceedings&#123;reisinger20a,<br/>&nbsp;&nbsp;title = &#123;Towards Data-driven Multi-target Tracking for Autonomous Driving&#125;,<br/>&nbsp;&nbsp;author = &#123;Christian Fruhwirth-Reisinger and Georg Krispel and Horst Possegger and Horst Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the Computer Vision Winter Workshop (CVWW)&#125;,<br/>&nbsp;&nbsp;year = &#123;2020&#125;<br/>&#125;"
 ---

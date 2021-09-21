@@ -14,5 +14,5 @@ code_url: https://drive.google.com/file/d/1pQeSIuQi-E3npRnZ8wemeBK9eN1G8iWN/view
 external_url: http://www.pamitc.org/cvpr15/
 teaser_img: /images/teaser/dat-color-dist.webp
 bib_id: possegger15a
-bib_entry: "@inproceedings&#123;possegger15a,<br/>&nbsp;&nbsp;title = &#123;In Defense of Color-based Model-free Tracking&#125;,<br/>&nbsp;&nbsp;author = &#123;H. Possegger and T. Mauthner and H. Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&#125;,<br/>&nbsp;&nbsp;year = &#123;2015&#125;<br/>&#125;"
+bib_entry: "@inproceedings&#123;possegger15a,<br/>&nbsp;&nbsp;title = &#123;In Defense of Color-based Model-free Tracking&#125;,<br/>&nbsp;&nbsp;author = &#123;Horst Possegger and Thomas Mauthner and Horst Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&#125;,<br/>&nbsp;&nbsp;year = &#123;2015&#125;<br/>&#125;"
 ---

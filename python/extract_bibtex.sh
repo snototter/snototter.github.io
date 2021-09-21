@@ -7,10 +7,9 @@ if [[ ! -d "${venv}" ]]; then
   source ${venv}/bin/activate
   pip3 install -U pip
   pip3 install pybtex
-else
-  source ${venv}/bin/activate
 fi
 
+source ${venv}/bin/activate
 python extract_bibtex.py theses.bib ../_theses
 python extract_bibtex.py pubs-other.bib ../_pubs_workshops
 python extract_bibtex.py pubs-reviewed.bib ../_pubs

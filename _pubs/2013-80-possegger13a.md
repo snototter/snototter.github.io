@@ -14,5 +14,5 @@ code_url: https://drive.google.com/file/d/17P5-KbD2xlBs4jAA8Rh_rh5jLSxdKcUp/view
 external_url: http://www.pamitc.org/cvpr13/
 teaser_img: /images/teaser/r2t2.webp
 bib_id: possegger13a
-bib_entry: "@inproceedings&#123;possegger13a,<br/>&nbsp;&nbsp;title = &#123;Robust Real-Time Tracking of Multiple Objects by Volumetric Mass Densities&#125;,<br/>&nbsp;&nbsp;author = &#123;H. Possegger and S. Sternig and T. Mauthner and P. M. Roth and H. Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&#125;,<br/>&nbsp;&nbsp;year = &#123;2013&#125;<br/>&#125;"
+bib_entry: "@inproceedings&#123;possegger13a,<br/>&nbsp;&nbsp;title = &#123;Robust Real-Time Tracking of Multiple Objects by Volumetric Mass Densities&#125;,<br/>&nbsp;&nbsp;author = &#123;Horst Possegger and Sabine Sternig and Thomas Mauthner and Peter M. Roth and Horst Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&#125;,<br/>&nbsp;&nbsp;year = &#123;2013&#125;<br/>&#125;"
 ---

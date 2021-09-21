@@ -11,5 +11,5 @@ video_url: https://vimeo.com/123386676
 external_url: http://www.pamitc.org/cvpr15/
 teaser_img: /images/teaser/saliency.webp
 bib_id: mauthner15a
-bib_entry: "@inproceedings&#123;mauthner15a,<br/>&nbsp;&nbsp;title = &#123;Encoding based Saliency Detection for Videos and Images&#125;,<br/>&nbsp;&nbsp;author = &#123;T. Mauthner and H. Possegger and G. Waltner and H. Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&#125;,<br/>&nbsp;&nbsp;year = &#123;2015&#125;<br/>&#125;"
+bib_entry: "@inproceedings&#123;mauthner15a,<br/>&nbsp;&nbsp;title = &#123;Encoding based Saliency Detection for Videos and Images&#125;,<br/>&nbsp;&nbsp;author = &#123;Thomas Mauthner and Horst Possegger and Georg Waltner and Horst Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&#125;,<br/>&nbsp;&nbsp;year = &#123;2015&#125;<br/>&#125;"
 ---
