@@ -65,6 +65,7 @@ Here you'll find a list of my publications, including [conference & journal pape
 
     if (bib_span.style.display == 'block') {
       bib_span.style.display = 'none';
+      tcell.onclick = function() { toggle_bib(id); };
     } else {
       bib_span.style.display = 'block';
       tcell.onclick = null; // Disable toggle via cell-click (so you can copy the bibentry)
