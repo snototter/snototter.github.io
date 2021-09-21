@@ -57,8 +57,14 @@ Here you'll find a list of my publications, including [conference & journal pape
   </tbody>
 </table>
 
+
 {% comment %}
-TODO potential bibtex popup solution
+TODO within each td.pubinfo:
+* add span class (default display:none, verbatim/fixed width font); + id
+* toggle visibility of span
+
+
+TODO potential bibtex popup solution (bad UI - can't copy text)
 <div class="bibpopup" onclick="toggleBibPopup()">Toggle Popup
   <span class="bibpopuptext" id="bib-somekey">
   <p>
