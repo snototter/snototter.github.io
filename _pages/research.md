@@ -41,6 +41,7 @@ Reviewing for conferences (since 2015), including:
 * [IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)](https://ieeexplore.ieee.org/xpl/conhome/1001809/all-proceedings)
 * [European Conference on Computer Vision (ECCV)](https://link.springer.com/conference/eccv)
 * [International Conference on Computer Vision (ICCV)](https://ieeexplore.ieee.org/xpl/conhome/1000149/all-proceedings)
+* [British Machine Vision Conference (BMVC)](https://britishmachinevisionassociation.github.io/bmvc)
 * [IEEE Winter Conference on Applications of Computer Vision (WACV)](https://ieeexplore.ieee.org/xpl/conhome/1000040/all-proceedings)
 * [Visual Object Tracking challenge (VOT) Workshop](https://www.votchallenge.net/)
 * [IEEE International Conference on Robotics and Automation (ICRA)](https://ieeexplore.ieee.org/xpl/conhome/1000639/all-proceedings)
