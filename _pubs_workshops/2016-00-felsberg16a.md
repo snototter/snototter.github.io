@@ -11,4 +11,6 @@ data_url: http://data.votchallenge.net/vot2016/vot-tir2016_results.zip
 code_url: https://www.tugraz.at/institute/icg/research/team-bischof/lrs/downloads/dat/
 external_url: https://www.votchallenge.net/vot2016/
 teaser_img: /images/teaser/vot2016_logo.png
+bib_id: felsberg16a
+bib_entry: "@inproceedings&#123;felsberg16a,<br/>&nbsp;&nbsp;title = &#123;The Thermal Infrared Visual Object Tracking VOT-TIR2016 Challenge Results&#125;,<br/>&nbsp;&nbsp;author = &#123;M. Felsberg and M. Kristan and J. Matas and A. Leonardis and R. Pflugfelder and G. H&#92;&quot;&#123;a&#125;ger and others&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the Workshop on the Visual Object Tracking Challenge (VOT, in conjunction with ECCV)&#125;,<br/>&nbsp;&nbsp;year = &#123;2016&#125;<br/>&#125;"
 ---

@@ -18,6 +18,20 @@ def parse_args():
     return parser.parse_args()
 
 
+def bib_escape(text):
+    """Replace special characters to render bibentries in HTML."""
+    escape_entities = [
+        ('"', '&quot;'),
+        ('\\', '&#92;'),
+        ('{', '&#123;'),
+        ('}', '&#125;'),
+        ('~', '&#126;')
+    ]
+    for search, repl in escape_entities:
+        text = text.replace(search, repl)
+    return text
+
+
 def html_escape(text):
     """Replace latex special characters with html entities."""
     # Check latex special characters: https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes
@@ -129,13 +143,13 @@ def author_name(p):
     return ' '.join(tokens)
 
 
-def extract_authors(persons, max_num):
+def extract_authors(persons, max_num, delimiter=', ', others='et al.'):
     """Return a string representation of the author list."""
     names = [author_name(p) for p in persons]
     if max_num is None or len(names) <= max_num:
-        return ', '.join(names)
+        return delimiter.join(names)
     else:
-        return ', '.join(names[:max_num] + ['et al.'])
+        return delimiter.join(names[:max_num] + [others])
     
 
 def dump_markdown(output_folder, entry):
@@ -147,6 +161,8 @@ def dump_markdown(output_folder, entry):
     rank = pub_rank(entry)
     filename = os.path.join(output_folder, f'{year}-{rank:02d}-{key}.md')
     title = html_escape(entry.fields["title"].replace("{", "").replace("}","").replace("\\",""))
+    bib_newline = '<br/>&nbsp;&nbsp;'
+    bib_venue = None
 
     if 'max_author_display' in entry.fields:
         max_author_display = int(entry.fields['max_author_display'])
@@ -166,22 +182,32 @@ def dump_markdown(output_folder, entry):
         }
         md += f'thesis_type: "{thesis_type[entry.type]}"\n'
         venue = entry.fields['school']
+        bib_venue = f'school = &#123;{entry.fields["school"]}&#125;,'
     elif entry.type in ['inproceedings']:
         venue = 'In ' + entry.fields['booktitle']
+        tmp = f' ({entry.fields["venue_abbreviation"]})' if 'venue_abbreviation' in entry.fields else ''
+        bib_venue = 'booktitle = &#123;' + bib_escape(entry.fields['booktitle'].replace("{", "").replace("}","")) + tmp + '&#125;,'
     elif entry.type in ['article']:
         venue = entry.fields['journal']
+        tmp = f' ({entry.fields["venue_abbreviation"]})' if 'venue_abbreviation' in entry.fields else ''
+        bib_venue = 'journal = &#123;' + bib_escape(entry.fields['journal'].replace("{", "").replace("}","")) + tmp + '&#125;,'
+
         if 'volume' in entry.fields:
             venue_extra = entry.fields['volume']
+            bib_venue += bib_newline + f'volume = &#123;{entry.fields["volume"]}&#125;,'
             num = None
             if 'number' in entry.fields:
                 num = entry.fields['number']
+                bib_venue += bib_newline + f'number = &#123;{num}&#125;,'
             if 'issue' in entry.fields:
                 num = entry.fields['issue']
+                bib_venue += bib_newline + f'issue = &#123;{num}&#125;,'
             if num is not None:
                 venue_extra += f'({num})'
-            
+
             if 'pages' in entry.fields:
                 venue_extra += ':' + entry.fields['pages']
+                bib_venue += bib_newline + f'pages = &#123;{entry.fields["pages"]}&#125;,'
 
     venue = html_escape(venue)
     venue_extra = None if venue_extra is None else html_escape(venue_extra)
@@ -225,6 +251,15 @@ def dump_markdown(output_folder, entry):
     # Teaser image
     if 'teaser_img' in entry.fields:
         md += f'teaser_img: {entry.fields["teaser_img"]}\n'
+    # BibTeX
+    md += f'bib_id: {key}\n'
+    bib_title = bib_escape(entry.fields["title"].replace("{", "").replace("}",""))
+    bib_authors = bib_escape(extract_authors(entry.persons['author'], max_author_display,
+                             delimiter=' and ', others='others'))
+    # Cannot split this string across multiple lines (or jekyll will render additional, unwanted whitespace)
+    md += f"""bib_entry: "@{entry.type}&#123;{key},{bib_newline}title = &#123;{bib_title}&#125;,{bib_newline}author = &#123;{bib_authors}&#125;,{bib_newline}{bib_venue}{bib_newline}year = &#123;{year}&#125;<br/>&#125;"\n"""
+
+    # File closure
     md += '---\n'
 
     with open(filename, 'w') as f:

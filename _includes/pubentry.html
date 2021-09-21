@@ -54,7 +54,11 @@
       {{ pub.venue_abbrev }} {{ pub.year }}
     {% endif %}
   </td>
+  {% if pub.bib_entry %}
+  <td class="pubinfo" onclick="toggle_bib('{{ pub.bib_id }}')" id="{{ pub.bib_id }}-pubinfo">
+  {% else %}
   <td class="pubinfo">
+  {% endif %}
     <p><b>{{ pub.title }}</b></p>
     <p>{{ pub.authors }}{% if pub.thesis_type %} - {{ pub.thesis_type }}{% endif %}</p>
     {% if pub.venue %}
@@ -73,6 +77,14 @@
         <i>{{ venue_html }}</i>, {{ pub.year }}.
       {% endif %}
       </p>
+      {% if pub.bib_entry %}
+      <span class="bibentry" id="{{ pub.bib_id }}">
+        <p><b>BibTeX entry:</b></p>
+        <p>
+          {{ pub.bib_entry }}
+        </p>
+      </span>
+      {% endif %}
     {% endif %}
   </td>
   <td class="puburls">
@@ -116,7 +128,11 @@
           {% endif %}
         </td>
         <td>
-          <i class="fa fa-link withoutpuburl">{% comment %}TODO render bibtex! {% endcomment %}</i>
+          {% if pub.bib_entry %}
+            <i class="fa fa-link withpuburl" onclick="toggle_bib('{{ pub.bib_id }}')"></i>
+          {% else %}
+            <i class="fa fa-link withoutpuburl"></i>
+          {% endif %}
         </td>
       </tr>
       <tr>

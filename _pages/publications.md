@@ -58,33 +58,16 @@ Here you'll find a list of my publications, including [conference & journal pape
 </table>
 
 
-{% comment %}
-TODO within each td.pubinfo:
-* add span class (default display:none, verbatim/fixed width font); + id
-* toggle visibility of span
-
-
-TODO potential bibtex popup solution (bad UI - can't copy text)
-<div class="bibpopup" onclick="toggleBibPopup()">Toggle Popup
-  <span class="bibpopuptext" id="bib-somekey">
-  <p>
-      border: 1px dashed #B3B2B2;
-    margin-left: 1em;
-    margin-right: 1em;
-    margin-bottom: 2em;
-    padding: 1em;
-    background-color: #F8F8F8;
-    font-family: monospace;
-    font-size: 13px;
-    </p>
-  </span>
-</div>
-
 <script>
-// When the user clicks on div, open the popup
-function toggleBibPopup() {
-  var popup = document.getElementById("bib-somekey");
-  popup.classList.toggle("show");
-}
+  function toggle_bib(id) {
+    var bib_span = document.getElementById(id);
+    var tcell = document.getElementById(id + '-pubinfo')
+
+    if (bib_span.style.display == 'block') {
+      bib_span.style.display = 'none';
+    } else {
+      bib_span.style.display = 'block';
+      tcell.onclick = null; // Disable toggle via cell-click (so you can copy the bibentry)
+    }
+  }
 </script>
-{% endcomment %}
