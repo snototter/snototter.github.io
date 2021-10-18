@@ -49,7 +49,7 @@ Here you'll find a list of my publications, including [conference & journal pape
 
 
 <h2 id="theses" class="pubheader">Theses{% include scroll_top %}</h2>
-<table class="pubtable">
+<table class="pubtable" id="thesistable">
   <tbody>
     {% for pub in site.theses reversed %}
       {% include pubentry.html %}

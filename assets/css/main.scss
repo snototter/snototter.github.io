@@ -123,6 +123,10 @@ dt {
   font-weight:500;
 }
 
+td.puburls {
+  vertical-align: top;
+}
+
 td.puburls table {
   border: none;
 
@@ -143,10 +147,19 @@ i.withoutpuburl { color: #dfdfdf; }
 table.pubtable td.pubteaser {
   text-align: center;
   font-weight: 800;
+  vertical-align: top;
   padding: 1em 1em 1em 1em;
   img {
-    max-width: 100%;
+    //max-width: 100%;
     max-height: 150px;
+    max-width: 120px;
+    min-width: 60px;
+  }
+}
+
+#thesistable td.pubteaser {
+  img {
+    max-width: 75px;
   }
 }
 
