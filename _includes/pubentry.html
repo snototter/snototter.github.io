@@ -91,71 +91,98 @@
     <table>
       <tr>
         <td>
-          {% if pdf_url %}
-          <a href="{{ pdf_url }}" target="_blank"><i class="fa fa-file-pdf withpuburl"></i></a>
-          {% else %}
-          <i class="fa fa-file-pdf withoutpuburl"></i>
-          {% endif %}
-        </td>
-        <td>
-          {% if auth_url %}
-          <a href="{{ auth_url }}" target="_blank"><i class="fa fa-book-open withpuburl"></i></a>
-          {% else %}
-          <i class="fa fa-book-open withoutpuburl"></i>
-          {% endif %}
-        </td>
-        <td>
-            {% if supplemental_url %}
-              <a href="{{ supplemental_url }}" target="_blank"><i class="fa fa-file-alt withpuburl"></i></a>
+          <div class="icontooltip">
+            {% if pdf_url %}
+            <a href="{{ pdf_url }}" target="_blank"><i class="fa fa-file-pdf withpuburl"></i></a>
             {% else %}
-              <i class="fa fa-file-alt withoutpuburl"></i>
+            <i class="fa fa-file-pdf withoutpuburl"></i>
             {% endif %}
+            <span class="icontooltiptext">Author's Preprint</span>
+          </div>
+        </td>
+        <td>
+          <div class="icontooltip">
+            {% if auth_url %}
+            <a href="{{ auth_url }}" target="_blank"><i class="fa fa-book-open withpuburl"></i></a>
+            {% else %}
+            <i class="fa fa-book-open withoutpuburl"></i>
+            {% endif %}
+            <span class="icontooltiptext">Publisher's Version</span>
+          </div>
+        </td>
+        <td>
+            <div class="icontooltip">
+              {% if supplemental_url %}
+                <a href="{{ supplemental_url }}" target="_blank"><i class="fa fa-file-alt withpuburl"></i></a>
+              {% else %}
+                <i class="fa fa-file-alt withoutpuburl"></i>
+              {% endif %}
+              <span class="icontooltiptext">Supplemental Material</span>
+            </div>
           </td>
       </tr>
       <tr>
         <td>
-          {% if slide_url %}
-            <a href="{{ slide_url }}" target="_blank"><i class="fa fa-desktop withpuburl"></i></a>
-          {% else %}
-            <i class="fa fa-desktop withoutpuburl"></i>
-          {% endif %}
+          <div class="icontooltip">
+            {% if slide_url %}
+              <a href="{{ slide_url }}" target="_blank"><i class="fa fa-desktop withpuburl"></i></a>
+            {% else %}
+              <i class="fa fa-desktop withoutpuburl"></i>
+            {% endif %}
+            <span class="icontooltiptext">Presentation</span>
+          </div>
         </td>
         <td>
-          {% if video_url %}
-            <a href="{{ video_url }}" target="_blank"><i class="fa fa-video withpuburl"></i></a>
-          {% else %}
-            <i class="fa fa-video withoutpuburl"></i>
-          {% endif %}
+          <div class="icontooltip">
+            {% if video_url %}
+              <a href="{{ video_url }}" target="_blank"><i class="fa fa-video withpuburl"></i></a>
+            {% else %}
+              <i class="fa fa-video withoutpuburl"></i>
+            {% endif %}
+            <span class="icontooltiptext">Video</span>
+          </div>
         </td>
         <td>
-          {% if pub.bib_entry %}
-            <i class="fa fa-link withpuburl" onclick="toggle_bib('{{ pub.bib_id }}')"></i>
-          {% else %}
-            <i class="fa fa-link withoutpuburl"></i>
-          {% endif %}
+          <div class="icontooltip">
+            {% if pub.bib_entry %}
+              <i class="fa fa-link withpuburl" onclick="toggle_bib('{{ pub.bib_id }}')"></i>
+            {% else %}
+              <i class="fa fa-link withoutpuburl"></i>
+            {% endif %}
+            <span class="icontooltiptext">BibTeX Entry</span>
+          </div>
         </td>
       </tr>
       <tr>
         <td>
-        {% if data_url %}
-            <a href="{{ data_url }}" target="_blank"><i class="fa fa-database withpuburl"></i></a>
-        {% else %}
-            <i class="fa fa-database withoutpuburl"></i>
-        {% endif %}
+          <div class="icontooltip">
+            {% if data_url %}
+              <a href="{{ data_url }}" target="_blank"><i class="fa fa-database withpuburl"></i></a>
+            {% else %}
+              <i class="fa fa-database withoutpuburl"></i>
+            {% endif %}
+            <span class="icontooltiptext">Data</span>
+          </div>
         </td>
         <td>
-          {% if code_url %}
-            <a href="{{ code_url }}" target="_blank"><i class="fa fa-code withpuburl"></i></a>
-          {% else %}
-            <i class="fa fa-code withoutpuburl"></i>
-          {% endif %}
+          <div class="icontooltip">
+            {% if code_url %}
+              <a href="{{ code_url }}" target="_blank"><i class="fa fa-code withpuburl"></i></a>
+            {% else %}
+              <i class="fa fa-code withoutpuburl"></i>
+            {% endif %}
+            <span class="icontooltiptext">Software</span>
+          </div>
         </td>
         <td>
-          {% if external_url %}
-            <a href="{{ external_url }}" target="_blank"><i class="fa fa-globe-americas withpuburl"></i></a>
-          {% else %}
-            <i class="fa fa-globe-americas withoutpuburl"></i>
-          {% endif %}
+          <div class="icontooltip">
+            {% if external_url %}
+              <a href="{{ external_url }}" target="_blank"><i class="fa fa-globe-americas withpuburl"></i></a>
+            {% else %}
+              <i class="fa fa-globe-americas withoutpuburl"></i>
+            {% endif %}
+            <span class="icontooltiptext">External URL</span>
+          </div>
         </td>
       </tr>
     </table>

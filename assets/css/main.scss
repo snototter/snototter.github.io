@@ -263,3 +263,36 @@ table.iconsummary {
   margin-top: 0.5em;
   font-size: smaller;
 }
+
+/* Tooltip container */
+.icontooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.icontooltip .icontooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(46, 42, 42);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  //opacity: 0.8;
+  font-size: small;
+ 
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -50px;
+  margin-bottom: 0.5em;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.icontooltip:hover .icontooltiptext {
+  visibility: visible;
+  //transition: 0.1s;
+}

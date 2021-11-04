@@ -80,8 +80,7 @@ include:
   - _pages
   - files
 exclude:
-  - bibliography/
-  - bibliography/.venv3/lib/
+  - python/*
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
