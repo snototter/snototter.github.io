@@ -29,6 +29,36 @@ Here you'll find a list of my publications, including [conference & journal pape
   </tr>
 </table>
 
+{% comment %}
+Find min/max publication year
+{% endcomment %}
+{% assign pub_max_year = 0 %}
+{% assign pub_min_year = 9999 %}
+{% for pub in site.pubs %}
+  {% if pub.year > pub_max_year %}
+    {% assign pub_max_year = pub.year %}
+  {% endif %}
+  {% if pub.year < pub_min_year %}
+    {% assign pub_min_year = pub.year %}
+  {% endif %}
+{% endfor %}
+
+<h2 id="cjproc" class="pubheader">Conferences &amp; Journals{% include scroll_top %}</h2>
+{% for pub_year in (pub_min_year..pub_max_year) reversed %}
+  {% assign pubs_per_year = site.pubs | where: "year", pub_year %}
+  {% if pubs_per_year.size > 0 %}
+<h3>{{ pub_year }}{% include scroll_top %}</h3>
+<table class="pubtable">
+  <tbody>
+    {% for pub in pubs_per_year reversed %}
+      {% include pubentry.html %}
+    {% endfor %}
+  </tbody>
+</table>
+  {% endif %}
+{% endfor %}
+
+{% comment %}
 <h2 id="cjproc" class="pubheader">Conferences &amp; Journals{% include scroll_top %}</h2>
 <table class="pubtable">
   <tbody>
@@ -37,6 +67,7 @@ Here you'll find a list of my publications, including [conference & journal pape
     {% endfor %}
   </tbody>
 </table>
+{% endcomment %}
 
 <h2 id="chg" class="pubheader">Visual Object Tracking Challenges{% include scroll_top %}</h2>
 <table class="pubtable">
