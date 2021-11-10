@@ -166,7 +166,8 @@ def dump_markdown(output_folder, entry):
     year = int(entry.fields['year'])
     key = entry.key
     rank = pub_rank(entry)
-    filename = os.path.join(output_folder, f'{year}-{rank:02d}-{key}.md')
+    tiebraker = entry.fields['tiebraker'] if 'tiebraker' in entry.fields else 0
+    filename = os.path.join(output_folder, f'{year}-{rank:02d}{tiebraker}-{key}.md')
     title = html_escape(entry.fields["title"].replace("{", "").replace("}","").replace("\\",""))
     bib_newline = '<br/>&nbsp;&nbsp;'
     bib_venue = None
@@ -297,23 +298,23 @@ def pub_rank(entry):
     return 0
 
 
-def compare_bibentries(e1, e2):
-    """Sort bibtex entries by year and importance of venue"""
-    y1 = e1.fields['year']
-    y2 = e2.fields['year']
-    if y1 < y2:
-        return -1
-    elif y2 > y1:
-        return +1
-    else:
-        r1 = pub_rank(e1)
-        r2 = pub_rank(e2)
-        if r1 < r2:
-            return -1
-        elif r2 > r1:
-            return +1
-        else:
-            return 0
+# def compare_bibentries(e1, e2):
+#     """Sort bibtex entries by year and importance of venue"""
+#     y1 = e1.fields['year']
+#     y2 = e2.fields['year']
+#     if y1 < y2:
+#         return -1
+#     elif y2 > y1:
+#         return +1
+#     else:
+#         r1 = pub_rank(e1)
+#         r2 = pub_rank(e2)
+#         if r1 < r2:
+#             return -1
+#         elif r2 > r1:
+#             return +1
+#         else:
+#             return 0
 
 
 def parse_bibtex():
