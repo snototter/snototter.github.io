@@ -24,6 +24,7 @@ add project overview
 
 
 <h2>Awards & Honors{% include scroll_top %}</h2>
+* **Outstanding Reviewer**, [British Machine Vision Conference (BMVC)](https://www.bmvc2021-virtualconference.com/), 2021
 * Winner of the **Austrian Road Safety Board Research Award** (Forschungspreis des [Kuratoriums f&uuml;r Verkehrssicherheit, KfV](https://www.kfv.at/)), 2020
 * **Outstanding Reviewer**, [European Conference on Computer Vision (ECCV)](https://eccv2020.eu/), 2020
 * [NVIDIA](https://developer.nvidia.com/) Higher Education and Research Grant recipient, 2017
