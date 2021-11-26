@@ -6,7 +6,9 @@ venue: "In Proc. British Machine Vision Conference"
 venue_abbrev: BMVC
 pdf_url: /files/papers/fruhwirth-reisinger-bmvc21.pdf
 arxiv_url: https://arxiv.org/abs/2110.09355
+publisher_url: https://www.bmvc2021-virtualconference.com/assets/papers/1352.pdf
 supplemental_url: /files/papers/fruhwirth-reisinger-bmvc21-supplemental.pdf
+slide_url: https://www.bmvc2021-virtualconference.com/conference/papers/paper_1352.html
 external_url: http://www.bmvc2021.com/
 teaser_img: /images/teaser/fast3d.webp
 bib_id: reisinger21a
