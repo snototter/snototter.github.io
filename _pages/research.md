@@ -28,9 +28,6 @@ add project overview
 * Winner of the **Austrian Road Safety Board Research Award** (Forschungspreis des [Kuratoriums f&uuml;r Verkehrssicherheit, KfV](https://www.kfv.at/)), 2020
 * **Outstanding Reviewer**, [European Conference on Computer Vision (ECCV)](https://eccv2020.eu/), 2020
 * [NVIDIA](https://developer.nvidia.com/) Higher Education and Research Grant recipient, 2017
-{% comment %}
-* **Outstanding Reviewer**, [Elsevier Pattern Recognition (PR)](https://www.journals.elsevier.com/pattern-recognition), 2017
-{% endcomment %}
 * **OCG Best Paper Award** by the [Austrian Computer Society (&Ouml;sterreichische Computer Gesellschaft)](https://www.ocg.at/), 2013
 * Scholarship for hardware acquisition based on study performance granted by the [Faculty of Computer Science](https://www.tugraz.at/fakultaeten/csbme/home/), Graz University of Technology, 2012
 * **Academic excellence scholarships** from the [Faculty of Computer Science](https://www.tugraz.at/fakultaeten/csbme/home/), Graz University of Technology, 2008, 2009, 2010 and 2011
