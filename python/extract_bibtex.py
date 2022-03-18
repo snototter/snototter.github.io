@@ -284,6 +284,7 @@ def pub_rank(entry):
             'ICCV' : 80,
             'ECCV' : 80,
             'BMVC' : 70,
+            'ICIAP': 70,
             'ACCV' : 60,
             'WACV' : 60,
             'ICIP' : 60,
