@@ -47,13 +47,15 @@
 {% endif %}
 
 <tr class="pubentry">
-  <td class="pubteaser">
-    {% if pub.teaser_img %}
+  {% if pub.teaser_img %}
+    <td class="pubteaser">
       <img src="{{ pub.teaser_img }}"/>
-    {% else %}
-      {{ pub.venue_abbrev }} {{ pub.year }}
-    {% endif %}
-  </td>
+    </td>
+  {% else %}
+    <td class="pubteaser" style="-webkit-transform:rotate(-45deg); vertical-align: middle; letter-spacing:.1rem; font-size: 120%;">
+      {{ pub.venue_abbrev }}
+    </td>
+  {% endif %}
   {% if pub.bib_entry %}
   <td class="pubinfo" onclick="toggle_bib('{{ pub.bib_id }}')" id="{{ pub.bib_id }}-pubinfo">
   {% else %}
