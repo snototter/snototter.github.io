@@ -11,6 +11,11 @@ This is my personal website, forked from https://academicpages.github.io/
 * `project_url` for external project/detail page
 
 # Markdown Cheat Sheat for jekyll
+## Local testing:
+
+Refer to the [jekyll quickstart guide](https://jekyllrb.com/docs/). Once set up, simply run: `bundle exec jekyll serve`
+
+
 ## Locations of key files/directories
 
 * Basic config options: _config.yml
