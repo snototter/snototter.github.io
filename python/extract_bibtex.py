@@ -281,8 +281,8 @@ def pub_rank(entry):
         venues = {
             'TPAMI': 90,
             'CVPR' : 80,
-            'ICCV' : 80,
-            'ECCV' : 80,
+            'ICCV' : 79,
+            'ECCV' : 79,
             'BMVC' : 70,
             'ICIAP': 70,
             'ACCV' : 60,
