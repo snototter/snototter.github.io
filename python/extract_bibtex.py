@@ -34,8 +34,17 @@ def bib_escape(text):
 
 # Check latex special characters: https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes
 # HTML entitites: https://dev.w3.org/html5/html-author/charref
-html_escape_entities = [
+html_escape_entities_special = [
     ('&', '&amp;'),
+    # Quotation marks and apostrophes
+    ("'", "&apos;"), ('"', '&quot;'),
+    # Strip parentheses and unused commands
+    ('\\emph', ''), ('\\textbf', ''),
+    ('et al.', '<i>et al.</i>'),
+    ('{', ''), ('}', ''),
+    ('--', '&ndash;')
+]
+html_escape_entities_i8n = [
     # Tilde
     ('\\~{a}', '&atilde;'), ('{\\~a}', '&atilde;'),
     ('\\~{A}', '&Atilde;'), ('{\\~A}', '&Atilde;'),
@@ -119,19 +128,15 @@ html_escape_entities = [
     ('\\"{u}', '&uuml;'), ('{\\" u}', '&uuml;'), ('{\\"u}', '&uuml;'), ('ü', '&uuml;'),
     ('\\"{U}', '&Uuml;'), ('{\\" U}', '&Uuml;'), ('{\\"U}', '&Uuml;'), ('Ü', '&Uuml;'),
     ('ß', '&szlig;'),
-    # Quotation marks and apostrophes
-    ("'", "&apos;"), ('"', '&quot;'),
-    # Strip parentheses and unused commands
-    ('\\emph', ''), ('\\textbf', ''),
-    ('et al.', '<i>et al.</i>'),
-    ('{', ''), ('}', ''),
-    ('--', '&ndash;')
 ]
 
-def html_escape(text):
+def html_escape(text, escape_special: bool = True):
     """Replace latex special characters with html entities."""
-    for search, repl in html_escape_entities:
+    for search, repl in html_escape_entities_i8n:
         text = text.replace(search, repl)
+    if escape_special:
+      for search, repl in html_escape_entities_special:
+          text = text.replace(search, repl)
     return text
 
 
@@ -140,7 +145,7 @@ def author_name(p, abbreviate):
     def abbrev_first_name(fn):
         if abbreviate:
             # Check if name starts with special character
-            for search, _ in html_escape_entities:
+            for search, _ in html_escape_entities_i8n:
                 if fn.startswith(search):
                     return search + '.'
             return fn[:1] + '.'
@@ -168,7 +173,8 @@ def dump_markdown(output_folder, entry):
     rank = pub_rank(entry)
     tiebraker = entry.fields['tiebraker'] if 'tiebraker' in entry.fields else 0
     filename = os.path.join(output_folder, f'{year}-{rank:02d}{tiebraker}-{key}.md')
-    title = html_escape(entry.fields["title"].replace("{", "").replace("}","").replace("\\",""))
+#    title = html_escape(entry.fields["title"].replace("{", "").replace("}","").replace("\\",""))#FIXME escape umlauts first!
+    title = html_escape(entry.fields["title"], False).replace("{", "").replace("}","").replace("\\","")
     bib_newline = '<br/>&nbsp;&nbsp;'
     bib_venue = None
 
@@ -261,7 +267,7 @@ def dump_markdown(output_folder, entry):
         md += f'teaser_img: {entry.fields["teaser_img"]}\n'
     # BibTeX
     md += f'bib_id: {key}\n'
-    bib_title = bib_escape(entry.fields["title"].replace("{", "").replace("}",""))
+    bib_title = bib_escape(entry.fields["title"])  #.replace("{", "").replace("}",""))
     bib_authors = bib_escape(extract_authors(entry.persons['author'], max_author_display,
                              delimiter=' and ', others='others', abbreviate=False))
     # Cannot split this string across multiple lines (or jekyll will render additional, unwanted whitespace)

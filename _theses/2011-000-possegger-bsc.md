@@ -9,5 +9,5 @@ publisher_url: https://graz.pure.elsevier.com/en/publications/evaluation-of-feat
 external_url: https://www.tugraz.at/fakultaeten/csbme/home/
 teaser_img: /images/teaser/hat-bsc.webp
 bib_id: possegger-bsc
-bib_entry: "@bscthesis&#123;possegger-bsc,<br/>&nbsp;&nbsp;title = &#123;Evaluation of Feature Representations for Object Detection with Boosted Classifiers&#125;,<br/>&nbsp;&nbsp;author = &#123;Horst Possegger&#125;,<br/>&nbsp;&nbsp;school = &#123;Graz University of Technology, Faculty of Computer Science&#125;,<br/>&nbsp;&nbsp;year = &#123;2011&#125;<br/>&#125;"
+bib_entry: "@bscthesis&#123;possegger-bsc,<br/>&nbsp;&nbsp;title = &#123;&#123;Evaluation of Feature Representations for Object Detection with Boosted Classifiers&#125;&#125;,<br/>&nbsp;&nbsp;author = &#123;Horst Possegger&#125;,<br/>&nbsp;&nbsp;school = &#123;Graz University of Technology, Faculty of Computer Science&#125;,<br/>&nbsp;&nbsp;year = &#123;2011&#125;<br/>&#125;"
 ---
