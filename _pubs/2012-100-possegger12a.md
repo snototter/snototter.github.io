@@ -1,7 +1,7 @@
 ---
 title: "Unsupervised Calibration of Camera Networks and Virtual PTZ Cameras"
 year: 2012
-authors: "H. Possegger, M. R&amp;uuml;ther, S. Sternig, T. Mauthner, M. Klopschitz, P. M. Roth, H. Bischof"
+authors: "H. Possegger, M. R&uuml;ther, S. Sternig, T. Mauthner, M. Klopschitz, P. M. Roth, H. Bischof"
 venue: "In Proc. of the Computer Vision Winter Workshop"
 venue_abbrev: CVWW
 pdf_url: /files/papers/possegger-cvww12.pdf

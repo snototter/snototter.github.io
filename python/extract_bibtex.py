@@ -35,7 +35,6 @@ def bib_escape(text):
 # Check latex special characters: https://en.wikibooks.org/wiki/LaTeX/Special_Characters#Escaped_codes
 # HTML entitites: https://dev.w3.org/html5/html-author/charref
 html_escape_entities_special = [
-    ('&', '&amp;'),
     # Quotation marks and apostrophes
     ("'", "&apos;"), ('"', '&quot;'),
     # Strip parentheses and unused commands
@@ -132,6 +131,8 @@ html_escape_entities_i8n = [
 
 def html_escape(text, escape_special: bool = True):
     """Replace latex special characters with html entities."""
+    if escape_special:  # Special treatment for ampersand
+        text = text.replace('&', '&amp;')
     for search, repl in html_escape_entities_i8n:
         text = text.replace(search, repl)
     if escape_special:
@@ -173,7 +174,6 @@ def dump_markdown(output_folder, entry):
     rank = pub_rank(entry)
     tiebraker = entry.fields['tiebraker'] if 'tiebraker' in entry.fields else 0
     filename = os.path.join(output_folder, f'{year}-{rank:02d}{tiebraker}-{key}.md')
-#    title = html_escape(entry.fields["title"].replace("{", "").replace("}","").replace("\\",""))#FIXME escape umlauts first!
     title = html_escape(entry.fields["title"], False).replace("{", "").replace("}","").replace("\\","")
     bib_newline = '<br/>&nbsp;&nbsp;'
     bib_venue = None
