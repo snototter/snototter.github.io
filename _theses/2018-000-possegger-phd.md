@@ -10,5 +10,5 @@ slide_url: /files/presentations/phd-defense.tar.gz
 external_url: https://www.tugraz.at/fakultaeten/csbme/home/
 teaser_img: /images/teaser/hat-phd.webp
 bib_id: possegger-phd
-bib_entry: "@phdthesis&#123;possegger-phd,<br/>&nbsp;&nbsp;title = &#123;&#123;Contextual Cues for Causal Visual Tracking&#125;&#125;,<br/>&nbsp;&nbsp;author = &#123;Horst Possegger&#125;,<br/>&nbsp;&nbsp;school = &#123;Graz University of Technology, Faculty of Computer Science and Biomedical Engineering&#125;,<br/>&nbsp;&nbsp;year = &#123;2018&#125;<br/>&#125;"
+bib_entry: "@phdthesis&#123;possegger-phd,<br/>&nbsp;&nbsp;title = &#123;&#123;Contextual Cues for Causal Visual Tracking&#125;&#125;,<br/>&nbsp;&nbsp;author = &#123;Possegger, Horst&#125;,<br/>&nbsp;&nbsp;school = &#123;Graz University of Technology, Faculty of Computer Science and Biomedical Engineering&#125;,<br/>&nbsp;&nbsp;year = &#123;2018&#125;<br/>&#125;"
 ---

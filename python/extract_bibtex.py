@@ -143,17 +143,23 @@ def html_escape(text, escape_special: bool = True):
 
 def author_name(p, abbreviate):
     """Output the pybtex.Person's name"""
-    def abbrev_first_name(fn):
+    def abbrev(name):
         if abbreviate:
             # Check if name starts with special character
             for search, _ in html_escape_entities_i8n:
-                if fn.startswith(search):
+                if name.startswith(search):
                     return search + '.'
-            return fn[:1] + '.'
+            return name[:1] + '.'
         else:
-            return fn
-    tokens = [abbrev_first_name(fn) for fn in p.first_names] + p.middle_names + p.prelast_names + p.last_names
-    return ' '.join(tokens)
+            return name
+    if abbreviate:    
+        tokens = [abbrev(n) for n in p.first_names] + [abbrev(n) for n in p.middle_names] + p.prelast_names + p.last_names
+        return ' '.join(tokens)
+    else:
+        # Invoked for the bibtex string
+        last = ' '.join(p.prelast_names + p.last_names)
+        first = ' '.join([abbrev(n) for n in p.first_names] + [abbrev(n) for n in p.middle_names])
+        return last + ', ' + first
 
 
 def extract_authors(persons, max_num, delimiter=', ', others='et al.', abbreviate=True):

@@ -12,5 +12,5 @@ code_url: https://drive.google.com/file/d/15PwYwZmccQRCEB4JSM_5V4V-RZpjAI66/view
 external_url: http://www.pamitc.org/cvpr14/
 teaser_img: /images/teaser/occgeo.webp
 bib_id: possegger14a
-bib_entry: "@inproceedings&#123;possegger14a,<br/>&nbsp;&nbsp;title = &#123;&#123;Occlusion Geodesics for Online Multi-Object Tracking&#125;&#125;,<br/>&nbsp;&nbsp;author = &#123;Horst Possegger and Thomas Mauthner and Peter M. Roth and Horst Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&#125;,<br/>&nbsp;&nbsp;year = &#123;2014&#125;<br/>&#125;"
+bib_entry: "@inproceedings&#123;possegger14a,<br/>&nbsp;&nbsp;title = &#123;&#123;Occlusion Geodesics for Online Multi-Object Tracking&#125;&#125;,<br/>&nbsp;&nbsp;author = &#123;Possegger, Horst and Mauthner, Thomas and Roth, Peter M. and Bischof, Horst&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)&#125;,<br/>&nbsp;&nbsp;year = &#123;2014&#125;<br/>&#125;"
 ---

@@ -13,5 +13,5 @@ code_url: https://drive.google.com/file/d/1cAuwzbSX8UTfYnkWHQPsxuqbM3SFhVgx/view
 external_url: http://cvww2012.vicos.si/
 teaser_img: /images/teaser/vptz.webp
 bib_id: possegger12a
-bib_entry: "@inproceedings&#123;possegger12a,<br/>&nbsp;&nbsp;title = &#123;&#123;Unsupervised Calibration of Camera Networks and Virtual PTZ Cameras&#125;&#125;,<br/>&nbsp;&nbsp;author = &#123;Horst Possegger and Matthias R&#92;&quot;&#123;u&#125;ther and Sabine Sternig and Thomas Mauthner and Manfred Klopschitz and Peter M. Roth and Horst Bischof&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the Computer Vision Winter Workshop (CVWW)&#125;,<br/>&nbsp;&nbsp;year = &#123;2012&#125;<br/>&#125;"
+bib_entry: "@inproceedings&#123;possegger12a,<br/>&nbsp;&nbsp;title = &#123;&#123;Unsupervised Calibration of Camera Networks and Virtual PTZ Cameras&#125;&#125;,<br/>&nbsp;&nbsp;author = &#123;Possegger, Horst and R&#92;&quot;&#123;u&#125;ther, Matthias and Sternig, Sabine and Mauthner, Thomas and Klopschitz, Manfred and Roth, Peter M. and Bischof, Horst&#125;,<br/>&nbsp;&nbsp;booktitle = &#123;Proc. of the Computer Vision Winter Workshop (CVWW)&#125;,<br/>&nbsp;&nbsp;year = &#123;2012&#125;<br/>&#125;"
 ---
