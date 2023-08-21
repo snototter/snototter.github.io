@@ -126,7 +126,7 @@ html_escape_entities_i8n = [
     ('\\"{O}', '&Ouml;'), ('{\\" O}', '&Ouml;'), ('{\\"O}', '&Ouml;'), ('Ö', '&Ouml;'),
     ('\\"{u}', '&uuml;'), ('{\\" u}', '&uuml;'), ('{\\"u}', '&uuml;'), ('ü', '&uuml;'),
     ('\\"{U}', '&Uuml;'), ('{\\" U}', '&Uuml;'), ('{\\"U}', '&Uuml;'), ('Ü', '&Uuml;'),
-    ('ß', '&szlig;'),
+    ('ß', '&szlig;'), ('{\\ss}', '&szlig;'),
 ]
 
 def html_escape(text, escape_special: bool = True):
