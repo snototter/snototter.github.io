@@ -302,6 +302,7 @@ def pub_rank(entry):
             'ICIP' : 60,
             'AVSS' : 50,
             'TMM'  : 40,
+            'IV'   : 20,
             'CVWW' : 10,
             'ITSC' : 10
         }
