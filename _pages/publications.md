@@ -47,7 +47,7 @@ Find min/max publication year
 {% for pub_year in (pub_min_year..pub_max_year) reversed %}
   {% assign pubs_per_year = site.pubs | where: "year", pub_year %}
   {% if pubs_per_year.size > 0 %}
-<h3>{{ pub_year }}{% include scroll_top %}</h3>
+<h3 id="p{{ pub_year }}">{{ pub_year }}{% include scroll_top %}</h3>
 <table class="pubtable">
   <tbody>
     {% for pub in pubs_per_year reversed %}
