@@ -295,6 +295,7 @@ def pub_rank(entry):
             'CVPR' : 80,
             'ICCV' : 79,
             'ECCV' : 79,
+            'NeurIPS' : 78,
             'BMVC' : 70,
             'ICIAP': 70,
             'ACCV' : 60,
@@ -304,7 +305,9 @@ def pub_rank(entry):
             'TMM'  : 40,
             'IV'   : 20,
             'CVWW' : 10,
-            'ITSC' : 10
+            'ITSC' : 10,
+            'EUSIPCO' : 9,
+            'OAGM' : 5
         }
         v = entry.fields['venue_abbreviation']
         if v in venues:
