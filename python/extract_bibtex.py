@@ -228,6 +228,16 @@ def dump_markdown(output_folder, entry):
             if 'pages' in entry.fields:
                 venue_extra += ':' + entry.fields['pages']
                 bib_venue += bib_newline + f'pages = &#123;{entry.fields["pages"]}&#125;,'
+    elif entry.type in ['inbook']:
+        venue = 'Chapter in ' + entry.fields['booktitle']
+        tmp = f' ({entry.fields["venue_abbreviation"]})' if 'venue_abbreviation' in entry.fields else ''
+        bib_venue = 'booktitle = &#123;' + bib_escape(entry.fields['booktitle'].replace("{", "").replace("}","")) + tmp + '&#125;,'
+
+        if 'publisher' in entry.fields:
+            venue += ', ' + entry.fields['publisher']
+            bib_venue += bib_newline + 'publisher = &#123;' + bib_escape(entry.fields["publisher"].replace("{", "").replace("}","")) + '&#125;,'
+
+        
 
     venue = html_escape(venue)
     venue_extra = None if venue_extra is None else html_escape(venue_extra)
