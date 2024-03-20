@@ -15,9 +15,9 @@ I'm a senior scientist coordinating the __Learning, Recognition & Surveillance (
 In 2018, I finished my PhD on visual object tracking - leveraging context information for generic single object tracking, as well as multi-object tracking algorithms.
 Currently, my research interests include (multiple) object tracking and detection in both 2D and 3D, human behavior analysis, anomaly detection and video analysis in general.
 
+{% comment %}
 <h2>Selected Projects{% include scroll_top %}</h2>
 To be completed...
-{% comment %}
 add research highlights (?)
 add project overview
 {% endcomment %}
@@ -35,13 +35,13 @@ add project overview
 
 <h2>Professional Services{% include scroll_top %}</h2>
 <!-- Been there, done that 
-CVPR 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023
+CVPR 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024
 BMVC 2021
 ECCV 2016, 2018, 2020
 ICCV 2017, 2019, 2023
 IV 2023
 ICRA 2020
-WACV 2019, 2022, 2023
+WACV 2019, 2022, 2023, 2024
 VOT 2021, 2022
 CVWW 2019, 2020, 2022, 2023
 -->
@@ -55,7 +55,7 @@ Reviewing for conferences (since 2015), including:
 * [IEEE International Conference on Robotics and Automation (ICRA)](https://ieeexplore.ieee.org/xpl/conhome/1000639/all-proceedings)
 * [IEEE Intelligent Vehicle Symposium (IV)](https://ieee-iv.org/)
 * [International Symposium on Image and Signal Processing and Analysis (ISPA)](https://ieeexplore.ieee.org/xpl/conhome/1000347/all-proceedings)
-* [Computer Vision Winter Workshop (CVWW)](https://cvww2020.vicos.si/about/), 2023
+* [Computer Vision Winter Workshop (CVWW)](https://cvww2020.vicos.si/about/)
 * [Workshop of the Austrian Association for Pattern Recognition (OAGM/AAPR)](https://aapr.at/?page_id=43)
 * [ACM SIGGRAPH Asia](https://dblp.org/db/conf/siggrapha/index.html)
 * [FH Scientific Computing Conference](https://www.fh-joanneum.at/en/veranstaltung/scientific-computing-2023/)
