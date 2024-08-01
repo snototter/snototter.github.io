@@ -22,6 +22,7 @@ def bib_escape(text):
     """Replace special characters to render bibentries in HTML."""
     escape_entities = [
         ('"', '&quot;'),
+        ('\\& ', '&#92;&amp; '),
         ('\\', '&#92;'),
         ('{', '&#123;'),
         ('}', '&#125;'),
@@ -41,7 +42,8 @@ html_escape_entities_special = [
     ('\\emph', ''), ('\\textbf', ''),
     ('et al.', '<i>et al.</i>'),
     ('{', ''), ('}', ''),
-    ('--', '&ndash;')
+    ('--', '&ndash;'),
+    ('\\& ', '&amp; ')
 ]
 html_escape_entities_i8n = [
     # Tilde
