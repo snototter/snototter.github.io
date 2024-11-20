@@ -24,9 +24,10 @@ add project overview
 
 
 <h2>Awards & Honors{% include scroll_top %}</h2>
-* **Outstanding Reviewer**, [British Machine Vision Conference (BMVC)](https://www.bmvc2021-virtualconference.com/), 2021
+* **Outstanding Reviewer**, [British Machine Vision Conference (BMVC)](https://bmvc2024.org/people/reviewers/), 2024
+* **Outstanding Reviewer**, [British Machine Vision Conference (BMVC)](https://www.bmvc2021-virtualconference.com/people/reviewers/), 2021
 * Winner of the **Austrian Road Safety Board Research Award** (Forschungspreis des [Kuratoriums f&uuml;r Verkehrssicherheit, KfV](https://www.kfv.at/)), 2020
-* **Outstanding Reviewer**, [European Conference on Computer Vision (ECCV)](https://eccv2020.eu/), 2020
+* **Outstanding Reviewer**, [European Conference on Computer Vision (ECCV)](https://eccv2020.eu/outstanding-reviewers/), 2020
 * [NVIDIA](https://developer.nvidia.com/) Higher Education and Research Grant recipient, 2017
 * **OCG Best Paper Award** by the [Austrian Computer Society (&Ouml;sterreichische Computer Gesellschaft)](https://www.ocg.at/), 2013
 * Scholarship for hardware acquisition based on study performance granted by the [Faculty of Computer Science](https://www.tugraz.at/fakultaeten/csbme/home/), Graz University of Technology, 2012
@@ -36,7 +37,7 @@ add project overview
 <h2>Professional Services{% include scroll_top %}</h2>
 <!-- Been there, done that 
 CVPR 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024
-BMVC 2021
+BMVC 2021, 2024
 ECCV 2016, 2018, 2020
 ICCV 2017, 2019, 2023
 IV 2023
