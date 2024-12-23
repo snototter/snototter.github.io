@@ -24,6 +24,7 @@ add project overview
 
 
 <h2>Awards & Honors{% include scroll_top %}</h2>
+* **Best Poster Award** for our paper [Vision-Language Guidance for LiDAR-based Unsupervised 3D Object Detection] at [British Machine Vision Conference (BMVC)](https://bmvc2024.org), 2024
 * **Outstanding Reviewer**, [British Machine Vision Conference (BMVC)](https://bmvc2024.org/people/reviewers/), 2024
 * **Outstanding Reviewer**, [British Machine Vision Conference (BMVC)](https://www.bmvc2021-virtualconference.com/people/reviewers/), 2021
 * Winner of the **Austrian Road Safety Board Research Award** (Forschungspreis des [Kuratoriums f&uuml;r Verkehrssicherheit, KfV](https://www.kfv.at/)), 2020
