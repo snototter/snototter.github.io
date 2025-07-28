@@ -25,3 +25,5 @@ gem "github-pages", group: :jekyll_plugins
 #  gem 'jekyll-sitemap'
 #  gem 'hawkins'
 #end
+
+gem "webrick", "~> 1.9"
