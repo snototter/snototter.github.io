@@ -8,9 +8,9 @@ redirect_from:
   - /research
 ---
 
-![LRS](/images/lrs.webp){: style="float: right; padding-top: 0.5em; max-width: 40%;"}
+![LRS](/images/lrp.webp){: style="float: right; padding-top: 0.5em; max-width: 40%;"}
 
-I'm a senior scientist coordinating the __Learning, Recognition & Surveillance (LRS)__ workgroup at the __Institute of Computer Graphics & Vision (ICG)__, Graz University of Technology.
+I'm heading the __Learning, Recognition & Perception (LRP)__ workgroup at the __Institute of Visual Computing (IVC)__, Graz University of Technology.
 
 In 2018, I finished my PhD on visual object tracking - leveraging context information for generic single object tracking, as well as multi-object tracking algorithms.
 Currently, my research interests include (multiple) object tracking and detection in both 2D and 3D, human behavior analysis, anomaly detection and video analysis in general.
