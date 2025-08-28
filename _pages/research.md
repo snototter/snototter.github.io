@@ -24,6 +24,7 @@ add project overview
 
 
 <h2>Awards & Honors{% include scroll_top %}</h2>
+* **Outstanding Reviewer**, [IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)](https://wacv2025.thecvf.com/reviewers/), 2025
 * **Best Poster Award** for our paper [Vision-Language Guidance for LiDAR-based Unsupervised 3D Object Detection](https://github.com/chreisinger/ViLGOD) at [British Machine Vision Conference (BMVC)](https://bmvc2024.org), 2024
 * **Outstanding Reviewer**, [British Machine Vision Conference (BMVC)](https://bmvc2024.org/people/reviewers/), 2024
 * **Outstanding Reviewer**, [British Machine Vision Conference (BMVC)](https://www.bmvc2021-virtualconference.com/people/reviewers/), 2021
@@ -37,15 +38,15 @@ add project overview
 
 <h2>Professional Services{% include scroll_top %}</h2>
 <!-- Been there, done that 
-CVPR 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024
+CVPR 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023, 2024, 2025
 BMVC 2021, 2024
 ECCV 2016, 2018, 2020
-ICCV 2017, 2019, 2023
+ICCV 2017, 2019, 2023, 2025
 IV 2023
 ICRA 2020
-WACV 2019, 2022, 2023, 2024
+WACV 2019, 2022, 2023, 2024, 2025, 2026
 VOT 2021, 2022
-CVWW 2019, 2020, 2022, 2023
+CVWW 2019, 2020, 2022, 2023, 2024
 -->
 Reviewing for conferences (since 2015), including:
 * [IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)](https://ieeexplore.ieee.org/xpl/conhome/1001809/all-proceedings)
