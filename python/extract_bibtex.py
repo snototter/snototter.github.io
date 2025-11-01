@@ -314,6 +314,7 @@ def pub_rank(entry):
             'ICIAP': 70,
             'IROS' : 70,
             'ICRA' : 65,
+            'TMLR' : 60,
             'ACCV' : 60,
             'ICIP' : 60,
             'AVSS' : 50,
