@@ -42,6 +42,7 @@ html_escape_entities_special = [
     ('\\emph', ''), ('\\textbf', ''),
     ('et al.', '<i>et al.</i>'),
     ('{', ''), ('}', ''),
+    ('---', '&mdash;'),
     ('--', '&ndash;'),
     ('\\& ', '&amp; ')
 ]
@@ -231,7 +232,7 @@ def dump_markdown(output_folder, entry):
             if 'pages' in entry.fields:
                 venue_extra += ':' + entry.fields['pages']
                 bib_venue += bib_newline + f'pages = &#123;{entry.fields["pages"]}&#125;,'
-    elif entry.type in ['inbook']:
+    elif entry.type in ['inbook', 'incollection']:
         venue = 'Chapter in ' + entry.fields['booktitle']
         tmp = f' ({entry.fields["venue_abbreviation"]})' if 'venue_abbreviation' in entry.fields else ''
         bib_venue = 'booktitle = &#123;' + bib_escape(entry.fields['booktitle'].replace("{", "").replace("}","")) + tmp + '&#125;,'
@@ -311,20 +312,23 @@ def pub_rank(entry):
             'NeurIPS' : 78,
             'BMVC' : 70,
             'WACV' : 70,
-            'ICIAP': 70,
-            'IROS' : 70,
-            'ICRA' : 65,
+            'ICIAP': 40,
+            'IROS' : 72,
+            'ICRA' : 75,
             'TMLR' : 60,
             'ACCV' : 60,
             'ICIP' : 60,
             'AVSS' : 50,
             'TMM'  : 40,
+            'ECMR' : 30,
             'ICASSP' : 30,
             'IV'   : 20,
             'CVWW' : 10,
             'ITSC' : 10,
             'EUSIPCO' : 9,
-            'OAGM' : 5
+            'OAGM' : 10,
+            'AIROV': 10,
+            'AIRoV': 10,
         }
         v = entry.fields['venue_abbreviation']
         if v in venues:
