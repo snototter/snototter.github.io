@@ -2,4 +2,5 @@ _site/
 Gemfile.lock
 */venv/**
 */.venv*/**
+*.DS_Store
 
