@@ -24,6 +24,7 @@ add project overview
 
 
 <h2>Awards & Honors{% include scroll_top %}</h2>
+* **Outstanding Reviewer**, [European Conference on Computer Vision (ECCV)](https://eccv.ecva.net/Conferences/2026/ProgramCommittee#outstanding-reviewer), 2026
 * **Outstanding Reviewer**, [IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)](https://wacv.thecvf.com/reviewers/), 2026
 * **Outstanding Reviewer**, [IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)](https://wacv2025.thecvf.com/reviewers/), 2025
 * **Best Poster Award** for our paper [Vision-Language Guidance for LiDAR-based Unsupervised 3D Object Detection](https://github.com/chreisinger/ViLGOD) at [British Machine Vision Conference (BMVC)](https://bmvc2024.org), 2024
